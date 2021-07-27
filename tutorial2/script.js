@@ -30,16 +30,24 @@ function uploadFiles(e) {
         alert('하나만 올려주세요.');
         return;
     }
+	
+	if (files[0].name.startsWith('Item')){
 
-if (files[0].name.match(/Item_keyword.png/)){
+if (files[0].name.startsWith('Item_keyword')){
 $('#키워드열쇠').css({"display":"block"}).draggable();
 var audio = new Audio("./done.mp3");
 audio.play();
 return;
 }
 
-if (files[0].name.match(/Item_CD.png/)){
+if (files[0].name.startsWith('Item_CD')){
   alert('그 시도에 박수를 보냅니다.\n하지만 지금은 튜토리얼에 집중해 주세요!');
+  }
+		
+		    else{
+      alert('그게 뭔가요?\n여기서 쓰이는 것 같긴 한데...');
+      return;}
+
   }
 
 else{
