@@ -31,7 +31,9 @@ function uploadFiles(e) {
         alert('하나만 올려주세요.');
         return;
     }
-
+if (files[0].name.startsWith('Item')){
+	
+	
 if (files[0].name.match(/CD.png/)){
 $('#튜토5').animate({'opacity': 1}, {'duration': 2500, 'queue': false})
 .css({"display":"block"});
@@ -41,6 +43,12 @@ $("#clear")[0].play();
 $("#clear")[0].volume =0.2;
 }
 
+    else{
+      alert('그게 뭔가요?\n여기서 쓰이는 것 같긴 한데...');
+      return;}
+
+  }	
+	
 else{
       alert('올바른 아이템을 올려주세요.');
       return;
