@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<div style="text-align : center;">
+  <div id="Q0">
+  </div>
+  <div id="Q">
+  </div>
+<div id="item">
+</div>
+<div id="content">
+</div>
+</div>
+
+
+<style>
+#content{position: absolute;
+    left: 300px;
+    bottom: 80px;}
+    #Q0{position: absolute;
+  bottom: 80px;
+  width: 800px;
+height: 600px;
+background-image: url(./문제0.png);}   
+
+#Q{position: absolute;
+  bottom: 80px;
+  width: 800px;
+height: 600px;
+background-image: url(./문제1단계.png);
+opacity: 0;}   
+
+#Q {
+filter: saturate(0%) contrast(40%);
+}
+
+</style>
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+  <script>
+  $( function() {
+    $( 'item').draggable();
+  } );
+  </script>
+
+</body>
+</html>
