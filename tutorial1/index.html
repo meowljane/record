@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<div id="box" style="width:800px;">
+  <p style="text-align: center; " align="center"></p>
+<img src="./튜토1.png" id="튜토1" usemap="#튜토1">
+<map name="튜토1">
+    <area target="" alt="" title="" href="#next1" coords="695,505,696,547,727,526" shape="poly" onclick="document.getElementById('튜토2').style.display='block';document.getElementById('튜토1').style.display='none';">
+</map>
+</p>
+
+<p style="text-align: center; " align="center">
+<img src="./튜토2.png" title="" id="튜토2" usemap="#튜토2">
+<map name="튜토2">
+<area target="" alt="" title="" href="#prev2" coords="112,505,75,528,111,546" shape="poly" onclick="document.getElementById('튜토1').style.display='block';document.getElementById('튜토2').style.display='none';">
+<area target="" alt="" title="" href="#next2" coords="693,508,693,548,726,527" shape="poly" onclick="document.getElementById('튜토2').style.display='none';document.getElementById('튜토3').style.display='block';">
+</map>
+</p>
+
+<p style="text-align: center; " align="center">
+<img src="./튜토3.png" id="튜토3" usemap="#튜토3">
+<map name="튜토3">
+<area target="" alt="" title="" href="#prev3" coords="112,505,75,528,111,546" shape="poly" onclick="document.getElementById('튜토2').style.display='block';document.getElementById('튜토3').style.display='none';">
+<area target="" alt="" title="" href="#next3" coords=" 693,508,693,548,726,527" shape="poly" onclick="document.getElementById('튜토3').style.display='none'; document.getElementById('튜토4').style.display='block';document.getElementById('content').style.display='block';" download="">
+<area target="_blank" coords="468,492,323,368" shape="rect" href="./Item_CD.png" download="Item_CD.png">
+</map>
+ </p>
+
+<p style="text-align: center; " align="center">
+<img src="./튜토4.png" id="튜토4" usemap="#튜토4">
+<map name="튜토4">
+<area target="" alt="" title="" href="#prev4" coords="112,505,75,528,111,546" shape="poly" onclick="document.getElementById('튜토3').style.display='block';document.getElementById('튜토4').style.display='none';document.getElementById('content').style.display='none';">
+</map>
+ </p>
+
+<p style="text-align: center; " align="center">
+<img src="./튜토5.gif" id="튜토5">
+ </p>
+
+<div id="content">
+</div>
+
+</div>
+
+
+
+<audio loop="" id="clear">
+ <source src="./party.mp3" type="audio/mp3">
+</audio>
+<audio id="tutorial" autoplay="autoplay" loop>
+ <source src="./poniko.mp3" type="audio/mp3">
+</audio>
+
+
+<style>
+
+#튜토2{display:none;}
+#튜토3{display:none;}
+#튜토4{display:none;}
+#튜토5{display:none; opacity: 0;}
+#content{display:none; position: absolute;
+    left: 300px;
+    top: 450px;}
+
+#box{margin:0 auto; position: relative;}
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
