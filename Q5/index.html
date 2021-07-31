@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Q5</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body style="background-color : #000;"> 
+
+<div id="box" style="width:800px;">
+<img src="./Q1.png" id="Q1">
+<img src="./Q2.png" id="Q2">
+<div id="content1" class="content" value="puzzlea"></div>
+<div id="content2" class="content" value="puzzleb"></div>
+<div id="content3" class="content" value="puzzlec"></div>
+<div id="content4" class="content" value="puzzled"></div>
+<img src="./mag.png" id="mag" width="50" height="50">
+<div id="frame">
+  <canvas id="canvas"></canvas>
+  </div>
+<div id="content">
+</div>
+</div>
+
+
+<style>
+  #content{
+    position: absolute;
+    left: 200px;
+    top: 468px;
+    opacity: 0;
+    z-index: -1;}
+#Q1{position: absolute;
+width: 600px;
+}
+#Q2{position: absolute;
+width: 600px;
+opacity: 0;
+transition: 1s;
+}
+#content1{position: absolute;
+    left: 0px;
+    top: 100px;
+transform: rotate(0deg);
+  transition: 1s;}
+#content2{position: absolute;
+    left: 300px;
+    top: 100px;
+transform: rotate(0deg);
+  transition: 1s;}
+#content3{position: absolute;
+    left: 0px;
+    top: 400px;
+transform: rotate(0deg);
+  transition: 1s;}
+#content4{position: absolute;
+    left: 300px;
+    top: 400px;
+transform: rotate(0deg);
+  transition: 1s;}
+#box{margin:0 auto; position: relative; top: 0px;}
+
+
+  #frame {
+            position: absolute;
+            left: 140px;
+            top: 120px;
+            width: 320px;
+            height: 320px;
+            margin: 0px auto;
+            overflow : hidden;
+            opacity: 0;
+            transition: all 1s;
+            z-index: -1;
+            border: 3px solid white;
+             }
+  #canvas {
+          position: relative;
+          transition: 0.5s;
+           width: 320px;
+           height: 320px;}
+
+            #mag{position: absolute;
+             transform: translate(275px, 64px);
+            z-index: 3;
+            visibility: hidden;
+            opacity: 0;
+            transition: 1s;}
+        </style>
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script  src="./script.js"></script>
+  <script  src="./script2.js"></script>
+  <script type="text/javascript" src="html5game/wordmaze.js?OUGBC=1321042015"></script>
+  <script src="http://ricostacruz.com/jquery.transit/jquery.transit.js?v=14845"></script>
+<script>
+$(function() {
+$("#mag").mouseover( function() {
+$("#canvas").stop().transition({ 'transform' : 'scale(3.3)','transform-origin' : '160px 160px' }, 500);}); });
+$(function() {
+$("#mag").mouseout( 
+function(){
+$("#canvas").stop().transition({'transform' : 'scale(1)',}, 500);}); });
+</script>
+</body>
+</html>
+
