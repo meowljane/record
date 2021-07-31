@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Q13</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<div id="box" style="width:800px;">
+<img src="./판.png" >
+<img src="./열쇠.png" class="열쇠" style="position: relative; left: 10px; top: -590px;">
+</div>
+
+<div id="content">
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+<script>
+    $( '.열쇠').draggable();
+</script>
+<style>
+#content{position: absolute;
+    left: 300px;
+    top: 600px;
+z-index : -1;}
+
+body{-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+
+</style>
+</body>
+</html>
