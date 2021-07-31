@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<div style="text-align : center; position: absolute;">
+  <div id="Q1">
+    <img src="elephant.png" class="item" style="z-index: 3;">
+    <img src="cat.png" class="item" style="z-index: 2;">
+    <img src="frog.png" class="item"  style="z-index: 1;">
+  </div>
+  <div id="Q2">
+  </div>
+<div id="content">
+</div>
+</div>
+
+
+
+<style>
+#content{position: absolute;
+    left: 300px;
+    top: 600px;}
+
+#Q1{position: relative; 
+  top: 200px;
+  width: 800px;
+height: 400px;
+background-image: url(./Q1.png);
+filter: saturate(0%) contrast(100%);
+transition: 1.5s;
+}   
+
+#Q2{position: absolute; 
+  top: 10px;
+  width: 800px;
+  height: 600px;
+  background-image: url(./Q2.png);
+  display: none;
+}   
+
+.item{top: -200px;
+opacity : 1;}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+  <script>
+  var item_idx = 10;
+    $(".item" ).draggable();
+  </script>
+
+</body>
+</html>
+$('#content')
+  .on("dragover", dragOver)
+  .on("dragleave", dragOver)
+  .on("drop", uploadFiles);
+
+function dragOver(e){
+	e.stopPropagation();
+	e.preventDefault();
+	if (e.type == "dragover") {
+		$(e.target).css({
+			"background-color": "black",
+			"outline-offset": "-20px"
+		});
+	} else {
+    	$(e.target).css({
+			"background-color": "black",
+			"outline-offset": "-10px"
+		});
+    }
+}
+
+function uploadFiles(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    dragOver(e);
+  
+    e.dataTransfer = e.originalEvent.dataTransfer;
+    var files = e.target.files || e.dataTransfer.files;
+    if (files.length > 1) {
+        alert('하나만 올려주세요.');
+        return;
+    }
+
+    if (files[0].name.startsWith('색안경')){
+      $('#Q1').css('filter', 'saturate(100%)');
+      $('.item').css('opacity', '0.4');
+      var audio = new Audio("./done.mp3");
+      audio.play();
+      return;
+      }
+
+if (files[0].name.startsWith('튜토리얼')){
+      alert('그 아이템은 이제 필요 없어요. 버려주세요');
+      return;
+}
+
+if (files[0].name.startsWith('CD')){
+      alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+      return;
+}
+
+if (files[0].name.startsWith('상자')){
+      alert('그게 아니에요. 여기 너무 어둡지 않아요?');
+      return;
+}
+
+else{
+      alert('올바른 아이템을 올려주세요.');
+      return;
+    }
+}
+#content{
+    outline: 2px dashed #ffffff ;
+    outline-offset:-10px;  
+    text-align: center;
+    transition: all .15s ease-in-out;
+    width: 200px;
+    height: 150px;
+    background-color: black;
+}
+
+#content img, #content video{
+    width:100%;
+    height:100%;
+    display:none;
+}
