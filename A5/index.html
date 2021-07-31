@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body style="background-color:#a3a3a3;">
+
+<div id="box" style="width:800px;">
+<img src="./Q1.png" id="Q1">
+<img src="./Q2.png" id="Q2">
+<img src="./click to.png" id="click">
+<div id="content1" class="content"></div>
+<div id="content2" class="content"></div>
+<div id="content3" class="content"></div>
+<div id="content4" class="content"></div>
+</div>
+
+
+<style>
+#click{opacity: 0;
+  transition: 1s;
+  position: relative;
+    left: 150px;
+    top: 65px;}
+#Q1{position: absolute;
+  width: 600px;
+  top: 0px;
+  
+}
+#Q2{position: absolute;
+  width: 600px;
+  top: 0px;
+  opacity: 0;
+  transition: 1s;
+}
+#content1{position: absolute;
+    left: 0px;
+    top: 140px;
+transform: rotate(0deg);
+  transition: 1s;}
+#content2{position: absolute;
+    left: 300px;
+    top: 140px;
+transform: rotate(0deg);
+  transition: 1s;}
+#content3{position: absolute;
+    left: 0px;
+    top: 440px;
+transform: rotate(0deg);
+  transition: 1s;}
+#content4{position: absolute;
+    left: 300px;
+    top: 440px;
+transform: rotate(0deg);
+  transition: 1s;}
+#box{margin:0 auto; position: relative; top: 0px;}
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
+
