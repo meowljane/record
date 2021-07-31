@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Q14</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<div id="box" style="width:800px;">
+<img src="./판1.png" >
+<img src="./조각1.png" class="조각" id="조각1" style="position: relative; left: 569px; top: -192px;">
+<img src="./조각2.png" class="조각" id="조각2" style="position: relative; left: 452px; top: -447px;">
+<img src="./조각3.png" class="조각" id="조각3" style="position: relative; left: -287px; top: -369px;">
+<img src="./조각4.png" class="조각" id="조각4" style="position: relative; left: -441px; top: -663px;">
+<img src="./조각5.png" class="조각" id="조각5" style="position: relative; left: 539px; top: -778px;">
+<img src="./조각6.png" class="조각" id="조각6" style="position: relative; left: -272px; top: -338px;">
+<img src="./조각7.png" class="조각" id="조각7" style="position: relative; left: -432px; top: -678px;">
+</div>
+
+<div id="content">
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+<script>
+    $( '.조각').draggable();
+</script>
+<style>
+  #조각1{    position: absolute;
+    left: 5px;
+    top: 5px;
+-webkit-clip-path: polygon(80% 0, 80% 47%, 98% 47%, 98% 95%, 0 95%);
+clip-path: polygon(80% 0, 80% 47%, 98% 47%, 98% 95%, 0 95%);}
+#조각2{-webkit-clip-path: polygon(50% 0, 0 95%, 100% 95%);
+clip-path: polygon(50% 0, 0 95%, 100% 95%);}
+#조각3{-webkit-clip-path: polygon(2% 3%, 51% 2%, 100% 98%, 2% 98%);
+clip-path: polygon(2% 3%, 51% 2%, 100% 98%, 2% 98%);}
+#조각4{-webkit-clip-path: polygon(2% 5%, 60% 5%, 99% 92%, 2% 92%);
+clip-path: polygon(2% 5%, 60% 5%, 99% 92%, 2% 92%);}
+#조각5{-webkit-clip-path: polygon(3% 5%, 100% 5%, 58% 95%, 3% 95%);
+clip-path: polygon(3% 5%, 100% 5%, 58% 95%, 3% 95%);}
+#조각6{-webkit-clip-path: polygon(4% 9%, 94% 99%, 94% 9%);
+clip-path: polygon(4% 9%, 94% 99%, 94% 9%);}
+#조각7{-webkit-clip-path: polygon(2% 9%, 49% 100%, 95% 9%);
+clip-path: polygon(2% 9%, 49% 100%, 95% 9%);}
+
+#content{position: absolute;
+    left: 300px;
+    top: 600px;
+z-index : -1;}
+
+body{-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+
+</style>
+</body>
+</html>
