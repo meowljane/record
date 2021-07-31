@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Q16</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body style="background-color:#000000;">
+
+<div id="box" style="width:800px;">
+<div id="box" style="width:800px;"><br></div><div id="box" style="width:800px;"><br></div><div id="box" style="width:800px;">
+<div id="crossword" draggable="true"></div>
+<img src="./문제.png" id="문제">
+<div id="content"></div>
+</div>
+
+
+<style>
+#문제{position: absolute;
+opacity: .8; 
+width:800px;
+height:638px;
+}
+#crossword{position: absolute;
+ left: 300px;
+  top: 30px;}
+#content{position: absolute;
+    left: 300px;
+    top: 500px;}
+#box{margin:0 auto; position: relative;}
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+<script>
+    $( '#crossword').draggable();
+</script>
+
+</body>
+</html>
