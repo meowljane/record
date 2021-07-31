@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Q10</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<div style=" width : 100%; text-align : center;  position: absolute;">
+  <div id="Q1">
+  </div>
+  <div id="Q2">
+  </div>
+<div id="item">
+</div>
+<div id="content">
+</div>
+<div id="btn"></div>
+<img src="./how.png" id="how">
+
+
+<style>
+  *{filter: brightness(90%);}
+#content{position: absolute;
+    left: 300px;
+    top: 550px;}
+#btn{position: absolute;
+    z-index: 5;
+    height: 34px;
+    width: 100px;
+    top: 97px;
+    left: 112px;
+    display: none;}
+#how{
+position:absolute;
+top: 135px;
+    left: 100px;
+    width: 600px;
+    height: 300px;
+opacity:0;
+transition: all .5s ease-in-out;
+}
+#btn:hover + #how{
+  opacity:1;
+}
+#Q1{position: relative; 
+  background-size: contain;
+  background-repeat: no-repeat;
+    background-position: center;
+    left: 100px;
+  top: 10px;
+  width: 600px;
+height: 600px;
+background-image: url(./Q1.png);
+}   
+
+#Q2{position: absolute; 
+  background-size: contain;
+  background-repeat: no-repeat;
+    background-position: center;
+    left: 100px;
+  top: 10px;
+  width: 600px;
+height: 600px;
+  background-image: url(./Q2.png);
+  display: none;
+}   
+
+
+</style>
+
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script  src="./script.js"></script>
+  <script>
+  $( function() {
+    $( 'item').draggable();
+  } );
+  </script>
+
+</body>
+</html>
