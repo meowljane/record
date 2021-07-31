@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+<div id="box" style="width:800px;">
+<div id="이전판"></div>
+<div id="이후판"></div>
+<div id="길"></div>
+</div>
+
+<div id="content">
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+<script>
+    $( '.공').draggable();
+</script>
+<style>
+
+#content{position: absolute;
+    left: 400px;
+    top: 710px;
+z-index : -1;}
+
+  #이전판{background-image: url(./이전판.png);
+    width: 1000px;
+height: 700px;
+transition: 1s;
+position: absolute;}
+
+#이후판{
+  background-image :url(./이후판.png);
+  width: 1000px;
+height: 700px;
+position: relative;
+opacity: 0;
+}
+
+#길 {
+  background-image :url(./길.png);
+  width: 800px;
+height: 447px;
+position: absolute;
+    top: 203px;
+    left: 160px;
+}
+
+
+  @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+  }
+body{-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+
+</style>
+</body>
+</html>
