@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<div style="text-align : center; position: absolute;">
+  <div id="Q1">
+    <img src="elephant.png" class="item" style="z-index: 3;">
+    <img src="cat.png" class="item" style="z-index: 2;">
+    <img src="frog.png" class="item"  style="z-index: 1;">
+  </div>
+  <div id="Q2">
+  </div>
+<div id="content">
+</div>
+</div>
+
+
+
+<style>
+#content{position: absolute;
+    left: 300px;
+    top: 600px;}
+
+#Q1{position: relative; 
+  top: 200px;
+  width: 800px;
+height: 400px;
+background-image: url(./Q1.png);
+filter: saturate(0%) contrast(100%);
+transition: 1.5s;
+}   
+
+#Q2{position: absolute; 
+  top: 10px;
+  width: 800px;
+  height: 600px;
+  background-image: url(./Q2.png);
+  display: none;
+}   
+
+.item{top: -200px;}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+  <script>
+  var item_idx = 10;
+    $(".item" ).draggable();
+  </script>
+
+</body>
+</html>
