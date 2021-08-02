@@ -36,32 +36,32 @@ function uploadFiles(e) {
         return;
     }
 
-    if (files[0].name.match($(e.target).attr("value"))){
+    if (files[0].name.startsWith($(e.target).attr("value"))){
         $(e.target).css({"background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
             "outline": "none",
             "background-size": "100% 100%",});
-        if (files[0].name.match('puzzlea')){
+        if (files[0].name.startsWith('Item_조각A')){
           aonoff='good'
           if (aonoff=='good' && bonoff=='good'&&conoff=='good'&&donoff=='good'){
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
           }}
-        if (files[0].name.match('puzzleb')){
+        if (files[0].name.startsWith('Item_조각B')){
           bonoff='good'
           if (aonoff=='good' && bonoff=='good'&&conoff=='good'&&donoff=='good'){
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
           }}
-        if (files[0].name.match('puzzlec')){
+        if (files[0].name.startsWith('Item_조각C')){
           conoff='good'
           if (aonoff=='good' && bonoff=='good'&&conoff=='good'&&donoff=='good'){
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
           }}
-        if (files[0].name.match('puzzled')){
+        if (files[0].name.startsWith('Item_조각D')){
           donoff='good'
           if (aonoff=='good' && bonoff=='good'&&conoff=='good'&&donoff=='good'){
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
@@ -71,7 +71,7 @@ function uploadFiles(e) {
         }
 
 
-    else if (files[0].name.match('puzzle')){
+    else if (files[0].name.startsWith('Item_조각')){
     alert('퍼즐을 올리는건 맞지만 거기가 아니에요');
     return;
     }
