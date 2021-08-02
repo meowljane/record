@@ -103,11 +103,11 @@ transform: rotate(0deg);
 <script>
 $(function() {
 $("#mag").mouseover( function() {
-$("#canvas").stop().transition({ 'transform' : 'scale(3.3)','transform-origin' : '160px 160px' }, 500);}); });
+$("#canvas").css({ 'transform' : 'scale(3.3)','transform-origin' : '160px 160px' }, 500);}); });
 $(function() {
 $("#mag").mouseout( 
 function(){
-$("#canvas").stop().transition({'transform' : 'scale(1)',}, 500);}); });
+$("#canvas").css({'transform' : 'scale(1)',}, 500);}); });
 </script>
 </body>
 </html>
