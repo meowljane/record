@@ -16,6 +16,14 @@
 </div>
 </div>
 
+            <section class="modal modal-section type-alert">
+              <div class="enroll_box">
+                  <p class="menu_msg"></p>
+              </div>
+              <div class="enroll_btn">
+                  <button class="btn pink_btn modal_close">확인</button>
+              </div>
+          </section>
 
 <style>
 #content{position: absolute;
@@ -29,7 +37,13 @@ background-size: cover;
 background-image: url(./문제1.png);
 }   
 
-
+.modal .btn{cursor: pointer;border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+.dimLayer{display: block;width: 100%;background-color: rgba(0, 0, 0, 0.3);position: fixed;left: 0;top: 0px;margin: 0;padding: 0;z-index: 9998;}
+.modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+.modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+.menu_msg{font-size: 21px;font-weight: 500;}
+.enroll_box p{padding-bottom: 56px;}
+.pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
 </style>
 
  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
@@ -44,80 +58,3 @@ background-image: url(./문제1.png);
 
 </body>
 </html>
-
-$('#content')
-  .on("dragover", dragOver)
-  .on("dragleave", dragOver)
-  .on("drop", uploadFiles);
-
-function dragOver(e){
-	e.stopPropagation();
-	e.preventDefault();
-	if (e.type == "dragover") {
-		$(e.target).css({
-			"background-color": "black",
-			"outline-offset": "-20px"
-		});
-	} else {
-    	$(e.target).css({
-			"background-color": "black",
-			"outline-offset": "-10px"
-		});
-    }
-}
-
-function uploadFiles(e) {
-    e.stopPropagation();
-    e.preventDefault();
-    dragOver(e);
-  
-    e.dataTransfer = e.originalEvent.dataTransfer;
-    var files = e.target.files || e.dataTransfer.files;
-    if (files.length > 1) {
-        alert('하나만 올려주세요.');
-        return;
-    }
-
-    if (files[0].name.startsWith('Item_상자')){
-      $('#Q0').animate({'opacity': 0}, {'duration': 2500, 'queue': false});
-      $('#Q').animate({'opacity': 1}, {'duration': 2500, 'queue': false});
-      var audio = new Audio("./done.mp3");
-      audio.play();
-      return;}
-
-
-if (files[0].name.startsWith('Item_톱니바퀴')){
-      alert('좋은 생각입니다만, 굳이 지금 할 필요가 있을까요?');
-      return;
-}
-
-if (files[0].name.startsWith('Item_edit')){
-      alert('그 아이템은 이제 필요 없어요. 버려주세요');
-      return;
-}
-
-if (files[0].name.startsWith('Item_CD')){
-      alert('지금 노래가 맘에 안드신다는거죠? 어디 이 노래는 어때요?\n문제 풀이랑은 상관 없어요. 분위기나 바꿔보려는거예요.');
-      return;
-}
-
-else{
-      alert('올바른 아이템을 올려주세요.');
-      return;
-    }
-}
-#content{
-    outline: 2px dashed #ffffff ;
-    outline-offset:-10px;  
-    text-align: center;
-    transition: all .15s ease-in-out;
-    width: 200px;
-    height: 150px;
-    background-color: black;
-}
-
-#content img, #content video{
-    width:100%;
-    height:100%;
-    display:none;
-}
