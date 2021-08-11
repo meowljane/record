@@ -44,7 +44,7 @@ if (files[0].name.startsWith('Item_CD')){
 }
 
 if (files[0].name.startsWith('Item_상자')){
-       action_popup.alert(그게 아니에요. 여기 너무 어둡지 않아요?');
+       action_popup.alert('그게 아니에요. 여기 너무 어둡지 않아요?');
       return;
 }
 
