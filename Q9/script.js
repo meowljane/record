@@ -29,10 +29,18 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-         action_popup.alert('하나만 올려주세요.');
+         action_popup.alert('하나만 써 욕심부리지 말고');
         return;
     }
-
+if (files[0].name.startsWith('Item_edit')){
+       action_popup.alert('그 아이템은 이제 필요 없어.. 버려');
+      return;
+}if (files[0].name.startsWith('Item_keyword')){
+       action_popup.alert('그걸 왜 아직도 가지고 있어!');
+      return;
+}
+	
+	
     if (files[0].name.startsWith('Item_주사위')){
       $('#Q2').draggable().fadeIn(2000);
       var audio = new Audio("./done.mp3");
@@ -42,27 +50,24 @@ function uploadFiles(e) {
       }
 
 if (files[0].name.startsWith('Item_송곳') && dice=='on'){
-       action_popup.alert('주사위에 눈구멍을 더 내시려고요? 좋은 생각이지만 여기선 아니에요.');
+       action_popup.alert('주사위에 눈구멍을 더 내려고? 괜찮은 생각인데 아직은 아니야.');
       return;
       }
 
-if (files[0].name.startsWith('Item_edit')){
-       action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
-      return;
-}
+
 
 if (files[0].name.startsWith('Item_CD')){
-       action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+       action_popup.alert('여기 좀 음산하잖아... 이런 음악은 어때?');
       return;
 }
 
 if (files[0].name.startsWith('Item_상자')){
-       action_popup.alert('그게 아니에요. 여기 너무 어둡지 않아요?');
+       action_popup.alert('그 상자는 어디서 난거야?');
       return;
 }
 
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('그건 이 세계 아이템이 아닌 것 같아.');
       return;
     }
 }
