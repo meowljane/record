@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>back</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<div id="box" style="width:800px;">
+  <p style="text-align: center; " align="center"></p>
+<img src="./back1.png" id="back1" usemap="#back1">
+<map name="back1">
+    <area target="" alt="" title="" href="#next1" coords="695,505,696,547,727,526" shape="poly" onclick="document.getElementById('back2').style.display='block';document.getElementById('back1').style.display='none';">
+</map>
+</p>
+
+
+
+<p style="text-align: center; " align="center">
+<img src="./back2.png" id="back2" usemap="#back2">
+<map name="back2">
+<area target="" alt="" title="" href="#prev1" coords="112,505,75,528,111,546" shape="poly" onclick="document.getElementById('back1').style.display='block';document.getElementById('back2').style.display='none';">
+</map>
+ </p>
+
+
+</div>
+
+
+
+<audio loop="" id="clear">
+ <source src="./party.mp3" type="audio/mp3">
+</audio>
+<audio id="tutorial" autoplay="autoplay" loop>
+ <source src="./poniko.mp3" type="audio/mp3">
+</audio>
+
+
+<style>
+
+#back2{display:none;}
+
+
+#box{margin:0 auto; position: relative;}
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
