@@ -29,7 +29,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-         action_popup.alert(''하나만 올려주세요.');
+         action_popup.alert('하나만 올려주세요.');
         return;
     }
 
@@ -42,7 +42,7 @@ function uploadFiles(e) {
       }
 
 if (files[0].name.startsWith('Item_송곳') && dice=='on'){
-       action_popup.alert(''주사위에 눈구멍을 더 내시려고요? 좋은 생각이지만 여기선 아니에요.');
+       action_popup.alert('주사위에 눈구멍을 더 내시려고요? 좋은 생각이지만 여기선 아니에요.');
       return;
       }
 
