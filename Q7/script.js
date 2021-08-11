@@ -31,17 +31,17 @@ function uploadFiles(e) {
         return;
     }
 
-if (files[0].name.startsWith('톱니바퀴')){
+if (files[0].name.startsWith('Item_유연제')){
       action_popup.alert('좋은 생각입니다만, 굳이 지금 할 필요가 있을까요?');
       return;
 }
 
-if (files[0].name.startsWith('튜토리얼')){
+if (files[0].name.startsWith('Item_edit')){
       action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
       return;
 }
 
-if (files[0].name.startsWith('CD')){
+if (files[0].name.startsWith('Item_CD')){
       action_popup.alert('지금 노래가 맘에 안드신다는거죠? 어디 이 노래는 어때요?\n문제 풀이랑은 상관 없어요. 분위기나 바꿔보려는거예요.');
       return;
 }
