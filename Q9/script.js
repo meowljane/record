@@ -65,7 +65,10 @@ if (files[0].name.startsWith('Item_상자')){
        action_popup.alert('그 상자는 어디서 난거야?');
       return;
 }
-
+if (files[0].name.startsWith('Item_유연제','Item_고무호스','Item_열쇠','Item_톱니바퀴','Item_반지','Item_지도')){
+       action_popup.alert('그래.. 확실히 그런 아이템이 있다고는 들었는데...미래에서 왔니?');
+      return;
+}
 else{
       action_popup.alert('그건 이 세계 아이템이 아닌 것 같아.');
       return;
