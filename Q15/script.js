@@ -35,7 +35,7 @@ function uploadFiles(e) {
         action_popup.alert('하나만 올려주세요.');
         return;
     }
-    if (files[0].name.startsWith('Item_렌즈')){
+    if (files[0].name.startsWith('Item_CD')){
       $('#공1').fadeIn(2000);
       var audio = new Audio("./done.mp3");
       audio.play();
@@ -93,8 +93,8 @@ if (files[0].name.startsWith('Item_edit')){
       return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
-     action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+if (files[0].name.startsWith('Item_돋보기')){
+     action_popup.alert('무얼 자세히 보시려구요?.');
       return;
 }
 
