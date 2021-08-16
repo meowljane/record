@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div id="box" style="width:800px">
+  <div id="Q">
+  </div>
+<div id="item">
+</div>
+<div id="content">
+</div>
+</div>
+
+            <section class="modal modal-section type-alert">
+              <div class="enroll_box">
+                  <p class="menu_msg"></p>
+              </div>
+              <div class="enroll_btn">
+                  <button class="btn pink_btn modal_close">확인</button>
+              </div>
+          </section>
+
+<style>
+#content{position: absolute;
+    left: 300px;
+    top : 720px;}
+
+#Q{position: absolute;
+  width: 800px;
+height: 720px;
+background-size: cover;
+background-image: url(./문제1.png);
+}   
+#box{margin:0 auto; position: relative;}
+  
+      *{
+cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+#content, #btn, button{
+    cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+} 
+.modal .btn{cursor: pointer;border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+.modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+.modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+.menu_msg{font-size: 21px;font-weight: 500;}
+.enroll_box p{padding-bottom: 56px;}
+.pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
+</style>
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+  <script>
+  $( function() {
+    $( 'item').draggable();
+  } );
+  </script>
+
+</body>
+</html>
