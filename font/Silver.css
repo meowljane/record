@@ -1,12 +1,13 @@
 @font-face {
-    font-family: 'Silver';
-    src: url('./Silver.eot');
-    src: url('./Silver.eot?#iefix') format('embedded-opentype'),
-        url('./Silver.woff2') format('woff2'),
-        url('./Silver.woff') format('woff'),
-        url('./Silver.ttf') format('truetype'),
-        url('./Silver.svg#Silver') format('svg');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Silver';
+  src:url('Silver.woff') format('woff'),
+        url('Silver.woff2') format('woff2'),
+        url('Silver.svg#Silver') format('svg'),
+        url('Silver.eot'),
+        url('Silver.eot?#iefix') format('embedded-opentype'),
+        url('Silver.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
