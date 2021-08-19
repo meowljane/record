@@ -1,37 +1,12 @@
-
-
 @font-face {
     font-family: 'Silver';
-    font-weight: 700;
+    src: url('./Silver.eot');
+    src: url('./Silver.eot?#iefix') format('embedded-opentype'),
+        url('./Silver.woff2') format('woff2'),
+        url('./Silver.woff') format('woff'),
+        url('./Silver.ttf') format('truetype'),
+        url('./Silver.svg#Silver') format('svg');
+    font-weight: 500;
+    font-style: normal;
     font-display: swap;
-    src: local('Silver'),
-    url('./Silver.woff') format('woff'),
-    url('./Silver.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Silver';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Silver'),
-    url('./Silver.woff') format('woff'),
-    url('./Silver.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Silver';
-    font-weight: 300;
-    font-display: swap;
-    src: local('Silver'),
-    url('./Silver.woff') format('woff'),
-    url('./Silver.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Silver';
-    font-weight: 100;
-    font-display: swap;
-    src: local('Silver'),
-    url('./Silver.woff') format('woff'),
-    url('./Silver.ttf') format('truetype');
 }
