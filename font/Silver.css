@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Silver';
-  src:url('https://github.com/meowljane/record/blob/main/font/Silver.woff?raw=true') format('woff'),
-        url('https://github.com/meowljane/record/blob/main/font/Silver.woff2?raw=true') format('woff2'),
-        url('Silver.svg#Silver') format('svg'),
-        url('https://github.com/meowljane/record/blob/main/font/Silver.eot?raw=true'),
-        url('Silver.eot?#iefix') format('embedded-opentype'),
-        url('https://github.com/meowljane/record/blob/main/font/Silver.ttf?raw=true') format('truetype');
+  src:url('https://meowljane.github.io/record/font/Silver.woff') format('woff'),
+        url('https://meowljane.github.io/record/font/Silver.woff2') format('woff2'),
+        url('https://meowljane.github.io/record/font/Silver..svg#Silver') format('svg'),
+        url('https://meowljane.github.io/record/font/Silver.eot'),
+        url('https://meowljane.github.io/record/font/Silver.eot?#iefix') format('embedded-opentype'),
+        url('https://meowljane.github.io/record/font/Silver.ttf') format('truetype');
 
   font-weight: normal;
   font-style: normal;
