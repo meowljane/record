@@ -31,7 +31,7 @@ function uploadFiles(e) {
         return;
     }
 
-    if (files[0].name.startsWith('Item_색안경')){
+    if (files[0].name.startsWith('Item_색마법')){
       $('#Q1').css('filter', 'saturate(100%)');
       $('.item').css('opacity', '0.4');
       var audio = new Audio("./done.mp3");
@@ -44,12 +44,12 @@ if (files[0].name.startsWith('Item_edit')){
       return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
+if (files[0].name.startsWith('Item_음악마법')){
       action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
       return;
 }
 
-if (files[0].name.startsWith('Item_전구')){
+if (files[0].name.startsWith('Item_빛마법')){
      action_popup.alert('이미 이곳은 밝아지고 있어요.');
       return;
 }
