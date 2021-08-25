@@ -31,7 +31,7 @@ function uploadFiles(e) {
         return;
     }
 
-    if (files[0].name.startsWith('Item_상자')){
+    if (files[0].name.startsWith('Item_소환마법')){
       $('#Q0').animate({'opacity': 0}, {'duration': 2500, 'queue': false});
       $('#Q').animate({'opacity': 1}, {'duration': 2500, 'queue': false});
       var audio = new Audio("./done.mp3");
@@ -49,7 +49,7 @@ if (files[0].name.startsWith('Item_edit')){
       return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
+if (files[0].name.startsWith('Item_음악마법')){
       action_popup.alert('지금 노래가 맘에 안드신다는거죠? 어디 이 노래는 어때요?\n문제 풀이랑은 상관 없어요. 분위기나 바꿔보려는거예요.');
       return;
 }
