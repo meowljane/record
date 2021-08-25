@@ -31,7 +31,7 @@ function uploadFiles(e) {
         return;
     }
 
-    if (files[0].name.startsWith('Item_전구')){
+    if (files[0].name.startsWith('Item_빛마법')){
       $('#Q2').fadeIn(2000);
       var audio = new Audio("./done.mp3");
       audio.play();
@@ -43,12 +43,12 @@ if (files[0].name.startsWith('Item_edit')){
       return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
+if (files[0].name.startsWith('Item_음악마법')){
       action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
       return;
 }
 
-if (files[0].name.startsWith('Item_상자')){
+if (files[0].name.startsWith('Item_소환마법')){
       action_popup.alert('그게 아니에요. 여기 너무 어둡지 않아요?');
       return;
 }
