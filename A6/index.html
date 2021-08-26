@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<body style="background-color:#000000;">
-<div style="text-align : center;">
+<body>
+<div id="box" style="width:800px">
   <div id="Q">
   </div>
 <div id="item">
@@ -16,20 +16,39 @@
 </div>
 </div>
 
+            <section class="modal modal-section type-alert">
+              <div class="enroll_box">
+                  <p class="menu_msg"></p>
+              </div>
+              <div class="enroll_btn">
+                  <button class="btn pink_btn modal_close">확인</button>
+              </div>
+          </section>
 
 <style>
 #content{position: absolute;
-    left: 260px;
-    top :560px;}
+    left: 300px;
+    top : 600px;}
 
 #Q{position: absolute;
-  width: 720px;
-height: 540px;
+  width: 800px;
+height: 600px;
 background-size: cover;
 background-image: url(./문제2.gif);
 }   
-
-
+#box{margin:0 auto; position: relative;}
+  
+      *{
+cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+#content, #btn, button{
+    cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+} 
+.modal .btn{cursor: pointer;border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+.modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+.modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+.menu_msg{font-size: 21px;font-weight: 500;}
+.enroll_box p{padding-bottom: 56px;}
+.pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
 </style>
 
  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
