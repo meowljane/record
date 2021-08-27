@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 300px;
+  margin: 25px;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.loupe {
+  display: none;
+  position: absolute;
+      width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 46px solid transparent;
+    background: url(./mag.png) center/100% 100% border-box;
+    cursor: none;
+  overflow: hidden;
+}
+
+.loupe img {
+  position: absolute;
+  right; 0;
+}
