@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div id="box" style="width:800px;">
+<div id="지도" draggable="true"></div>
+<img src="./지도.png" id="문제">
+<div id="content"></div>
+</div>
+
+
+
+<audio loop="" id="clear">
+ <source src="./party.mp3" type="audio/mp3">
+</audio>
+<audio loop="" autoplay="autoplay" id="tutorial">
+ <source src="./poniko.mp3" type="audio/mp3">
+</audio>
+
+
+<style>
+#문제{position: absolute;
+  width:800px;
+height:640px;
+border: solid 5px;}
+#지도{position: absolute;
+    left: 300px;
+    top: 80px;
+z-index:-1;}
+#content{position: absolute;
+    left: 300px;
+  top: 660px;}
+#box{margin:0 auto; position: relative;}
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+<script  src="./script.js"></script>
+  <script>
+  $( function() {
+    $('#지도').draggable();
+  } );
+</script>
+
+</body>
+</html>
