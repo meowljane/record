@@ -37,6 +37,7 @@ function uploadFiles(e) {
       $('#mag').draggable().fadeIn(2000);
       var audio = new Audio("./done.mp3");
       audio.play();
+      $('*').css('cursor','none')
       돋보기 ='on'
       return;
       }
@@ -88,9 +89,10 @@ $(document).on("mouseenter", "#지도", function (e) {
         .attr('src', $('img', this).attr("src"))
         .css({ 'width': $currImage.width() * 2, 'height': $currImage.height() * 2 });
 
-    
+    $mag.html($img).css('opacity','1');
+  
+
     $(document).on("mousemove",moveHandler);
-                   
     function moveHandler(e) {
         var imageOffset = $currImage.offset(),
             fx = imageOffset.left - magWidth / 2,
@@ -112,6 +114,7 @@ $(document).on("mouseenter", "#지도", function (e) {
             bigx = (lx - magWidth / 4 - fx) * 2+100;
 
         $img.css({ 'left': -bigx, 'top': -bigy });
+
 
     }
 });
