@@ -113,9 +113,5 @@ $(document).on("mouseenter", "#지도", function (e) {
 
         $img.css({ 'left': -bigx, 'top': -bigy });
 
-        if (lx < fx || lh > fh || ly < fy || lw > fw) {
-            $img.remove();
-            $(document).off("mousemove",moveHandler);
-        }
     }
 });
