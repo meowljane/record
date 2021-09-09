@@ -7,26 +7,17 @@
 
 </head>
 <body>
-<div id="box" style="width:1000px;">
-  <div id="container">
-  <div id="지도">
-    <img id="map" src="./빈지도.png">  
+  <div id="box" style="width:1000px;">
+    <div id="container">
+    <div id="지도">
+      <img id="map" src="./빈지도.png">  
+    </div>
+    <div id="mag">
+    </div>
   </div>
-  <div id="mag">
+  <div id="content">
   </div>
-</div>
-<div id="content">
-</div>
-</div>
-              <section class="modal modal-section type-alert">
-              <div class="enroll_box">
-                  <p class="menu_msg"></p>
-              </div>
-              <div class="enroll_btn">
-                  <button class="btn pink_btn modal_close">확인</button>
-              </div>
-          </section>
-  
+  </div>
 
 <style>
 
@@ -36,7 +27,7 @@
 }
 
 #content{position: absolute;
-    left: 400px;
+    left: 300px;
     top: 900px;}
 
 #지도{
@@ -57,8 +48,8 @@ transition : background-image 1s;
     border-radius: 50%;
     border: 50px solid transparent;
     background: url(./mag전.png) center/100% 100% border-box;
-    cursor: none !important;
   overflow: hidden;
+  cursor: none;
   opacity: 1;
 }
 
@@ -66,11 +57,8 @@ transition : background-image 1s;
   position: absolute;
   right: 0;
 }
-  
-  #box{margin:0 auto; position: relative;}
-  
-  
-          *{
+
+*{
 cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
 #content, #btn, button, .열쇠{
     cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
@@ -83,7 +71,8 @@ cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/162910922
 .enroll_box p{padding-bottom: 56px;}
 .pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
 
-  
+#box{margin:0 auto; position: relative;}
+
 </style>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
