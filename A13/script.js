@@ -88,7 +88,6 @@ $(document).on("mouseenter", "#지도", function (e) {
         .attr('src', $('img', this).attr("src"))
         .css({ 'width': $currImage.width() * 2, 'height': $currImage.height() * 2 });
 
-    $mag.html($img).css('opacity','1');
     
     $(document).on("mousemove",moveHandler);
                    
@@ -117,7 +116,6 @@ $(document).on("mouseenter", "#지도", function (e) {
         if (lx < fx || lh > fh || ly < fy || lw > fw) {
             $img.remove();
             $(document).off("mousemove",moveHandler);
-            $mag.css('opacity','0');
         }
     }
 });
