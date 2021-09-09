@@ -57,7 +57,7 @@ transition : background-image 1s;
     border-radius: 50%;
     border: 50px solid transparent;
     background: url(./mag전.png) center/100% 100% border-box;
-    cursor: none important!;
+    cursor: none !important;
   overflow: hidden;
   opacity: 1;
 }
@@ -70,7 +70,11 @@ transition : background-image 1s;
   #box{margin:0 auto; position: relative;}
   
   
-
+          *{
+cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+#content, #btn, button, .열쇠{
+    cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+} 
   
 .modal .btn{border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
 .modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
