@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>page 2</title>
+		<meta charset="UTF-8" />
+		<script src="LocalConnection.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+
+			//나중에 지워도 되는 부분
+oneversion = 'none';
+p2version='none';
+whatisT1pT2p='none';
+whatisT1pB2p='none'
+	whatisL1pL2p='none'
+//여기까지. 변수확인용.
+
+R2p = window.screenLeft+window.outerWidth;
+L2p = window.screenLeft;
+T2p = window.screenTop+window.outerHeight-window.innerHeight;
+B2p = window.screenTop+window.outerHeight;
+
+
+
+//1페이지에서 받기 
+	var onetwo = new LocalConnection({
+name: 'onetwo',
+debug: true
+});
+
+onetwo.listen();
+
+onetwo.addCallback('square1', function(R1p, L1p, T1p, B1p, p1version) 
+{var L2p = window.screenLeft;
+var R2p = window.screenLeft+window.outerWidth;
+var T2p = window.screenTop+window.outerHeight-window.innerHeight;
+var B2p = window.screenTop+window.outerHeight;
+	whatisT1pT2p=Math.abs([T1p-T2p]);
+	whatisT1pB2p=Math.abs([T1p+200-B2p]);
+	whatisL1pL2p=Math.abs([L1p+300-L2p]);
+	if (p1version==3 && 600<=window.outerWidth && window.outerWidth<700 && Math.abs([T1p-T2p])<10 && Math.abs([T1p+200-B2p])<15 &&  Math.abs([L1p+300-L2p])<15){
+		oneversion=3;
+		//3페이지에 ver3 전송
+		var twothree = new LocalConnection({
+	name: 'twothree',
+	debug: true
+});
+
+this.pollsquare = function() {
+	var R2p = window.screenLeft+window.outerWidth;
+			var L2p = window.screenLeft;
+			var T2p = window.screenTop+window.outerHeight-window.innerHeight;
+			var B2p = window.screenTop+window.outerHeight;
+			var p2version = 3;
+			twothree.send('square2', R2p, L2p, T2p, B2p, p2version);
+	setTimeout(this.pollsquare, 1);
+}
+setTimeout(this.pollsquare, 1);
+//여기까지
+}
+	else if (p1version==1 && 600<=window.outerWidth && window.outerWidth<700 && Math.abs([T1p+200-T2p])<10 && Math.abs([B1p-T2p])<15 &&  Math.abs([L1p-L2p])<15){
+	oneversion=1;
+			//3페이지에 ver1 전송
+			var twothree = new LocalConnection({
+	name: 'twothree',
+	debug: true
+});
+
+this.pollsquare = function() {
+	var R2p = window.screenLeft+window.outerWidth;
+			var L2p = window.screenLeft;
+			var T2p = window.screenTop+window.outerHeight-window.innerHeight;
+			var B2p = window.screenTop+window.outerHeight;
+			var p2version = 1;
+			twothree.send('square2', R2p, L2p, T2p, B2p, p2version);
+	setTimeout(this.pollsquare, 1);
+}
+setTimeout(this.pollsquare, 1);
+//여기까지
+}
+
+
+
+
+	else if (p1version==2 && 400<=window.outerWidth && window.outerWidth<500 && Math.abs([T1p-T2p])<10 &&  Math.abs([L1p+400-L2p])<15){
+	oneversion=2;
+	//3페이지에 ver2 전송
+			var twothree = new LocalConnection({
+	name: 'twothree',
+	debug: true
+});
+
+this.pollsquare = function() {
+	var R2p = window.screenLeft+window.outerWidth;
+			var L2p = window.screenLeft;
+			var T2p = window.screenTop+window.outerHeight-window.innerHeight;
+			var B2p = window.screenTop+window.outerHeight;
+			var p2version = 2;
+			twothree.send('square2', R2p, L2p, T2p, B2p, p2version);
+	setTimeout(this.pollsquare, 1);
+}
+setTimeout(this.pollsquare, 1);
+//여기까지
+}
+
+else{oneversion=0;
+		//3페이지에 ver0 전송
+		var twothree = new LocalConnection({
+	name: 'twothree',
+	debug: true
+});
+
+this.pollsquare = function() {
+	var R2p = window.screenLeft+window.outerWidth;
+			var L2p = window.screenLeft;
+			var T2p = window.screenTop+window.outerHeight-window.innerHeight;
+			var B2p = window.screenTop+window.outerHeight;
+			var p2version = 0;
+			twothree.send('square2', R2p, L2p, T2p, B2p, p2version);
+	setTimeout(this.pollsquare, 1);
+}
+setTimeout(this.pollsquare, 1);
+//여기까지
+	$('.box').css('opacity','1');}
+});
+
+
+var threeone = new LocalConnection({
+name: 'threeone',
+debug: true
+});
+
+threeone.listen();
+
+threeone.addCallback('finalset', function(set1, set2, set3) 
+{
+if(set1==1){	
+	$('.ver1').css('opacity','0.5');
+	$('.non1').css('opacity','1');}
+	
+else if(set2==1){	
+	$('.ver2').css('opacity','0.5');
+	$('.non2').css('opacity','1');}	
+
+else if(set3==1){	
+	$('.ver3').css('opacity','0.5');
+	$('.non3').css('opacity','1');}	
+
+else{$('.box').css('opacity','1');}	
+});
+
+		</script>
+	</head>
+		<style>
+.box12{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./12.png);}
+
+.box13{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./13.png);}
+
+.box14{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./14.png);}
+
+.box23{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./23.png);}
+
+.box24{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./24.png);}
+
+.box34{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./34.png);}
+
+.des{width: 150px;
+height: 150px;
+float: left;
+position: relative;
+background-image: url(./2.png);}
+
+div{background-size: cover;
+  width: 100px !important;
+height: 100px !important;}
+
+
+html,body{-ms-overflow-style: none;      
+    margin: 0;
+    padding: 0;
+}
+    
+    ::-webkit-scrollbar { display: none;}
+		</style>
+
+	<body>
+<div class="box box34 ver3 non2 non1"></div>
+<div class="box box13 non3 non2 non1"></div>
+<div class="box box23 non3 ver2 non1"></div>
+<div class="box box24 non3 ver2 non1"></div>
+<div class="box box34 non3 ver2 non1"></div>
+<div class="box box23 non3 ver2 ver1"></div>
+<div class="box box14 ver3 ver2 non1"></div>
+<div class="box box13 non3 non2 non1"></div>
+<div class="box box12 non3 ver2 non1"></div>
+<div class="box box14 non3 ver2 non1"></div>
+<div class="box box13 non3 non2 non1"></div>
+<div class="box des non3 non2 ver1"></div>
+		<button onclick="alert(oneversion +','+ p2version+','+whatisT1pT2p+','+whatisT1pB2p+','+whatisL1pL2p)"></button>
+
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>back</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<script>
+
+$('.des3').css('display','none');
+
+</script>
+<body>
+<div class="des1" onclick="window.open('./page1.html','page1','width=200 height=600 left=50')"></div>
+<div class="des2" onclick="window.open('./page2.html','page2','width=200 height=600 left=150');return false"></div>
+<div class="des3" onclick="window.open('./page3.html','page3','width=200 height=600 left=250');return false"></div>
+
+<audio loop="" id="clear">
+ <source src="./party.mp3" type="audio/mp3">
+</audio>
+<audio id="tutorial" autoplay="autoplay" loop>
+ <source src="./poniko.mp3" type="audio/mp3">
+</audio>
+
+
+<style>
+
+
+.des1{
+float: left;
+position: relative;
+background-image: url(./1.png);}
+.des2{
+float: left;
+position: relative;
+background-image: url(./2.png);}
+.des3{
+float: left;
+position: relative;
+background-image: url(./3.png);}
+
+div{background-size: cover;
+  width: 100px;
+height: 100px;}
+
+html,body{-ms-overflow-style: none;      
+    margin: 0;
+    padding: 0;
+}
+    
+    ::-webkit-scrollbar { display: none;}
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
