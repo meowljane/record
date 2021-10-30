@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<img src="./qr.png" class="qr" id="조각1" style="position: absolute;left: 350px;top: 50px;">
+<img src="./one.png" class="mark" id="조각2" style="position: absolute;left: 100px;top: 250px;">
+<img src="./two.png" class="mark" id="조각3" style="position: absolute;left: 325px;top: 250px;">
+<img src="./three.png" class="mark" id="조각4" style="position: absolute;left: 550px;top: 250px;">
+</div>
+
+<div id="content">
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script  src="./script.js"></script>
+<script>
+    $( '.mark').draggable();
+</script>
+<style>
+
+#content{position: absolute;
+    left: 300px;
+    top: 500px;
+z-index : -1;}
+.qr{
+width: 100px;
+height: 100px;
+}
+
+.mark{
+width: 150px;
+height: 150px;
+}
+
+body{-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+
+</style>
+</body>
+</html>
