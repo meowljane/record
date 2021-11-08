@@ -30,6 +30,7 @@ function uploadFiles(e) {
         alert('하나만 올려주세요.');
         return;
     }
+	
 
     if (files[0].name.startsWith('Item_소환마법')){
       $('#Q0').animate({'opacity': 0}, {'duration': 2500, 'queue': false});
@@ -53,9 +54,12 @@ if (files[0].name.startsWith('Item_음악마법')){
       action_popup.alert('지금 노래가 맘에 안드신다는거죠? 어디 이 노래는 어때요?\n문제 풀이랑은 상관 없어요. 분위기나 바꿔보려는거예요.');
       return;
 }
-
+else if (files[0].name.startsWith('Item_')){action_popup.alert("좋은 생각이긴 한데...아직은 필요 없어 보여요");
+      return;
+}
+	
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('응? 그건 이 세상의 것이 아닌 것 같아...');
       return;
     }
 }
