@@ -5,7 +5,7 @@
     transition: all .15s ease-in-out;
     width: 200px;
     height: 150px;
-    background-color: black;
+   background-color: rgba(0,0,0,0.1);
 }
 
 #content img, #content video{
