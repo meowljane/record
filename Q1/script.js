@@ -41,7 +41,7 @@ function uploadFiles(e) {
 
 
 if (files[0].name.startsWith('Item_톱니바퀴')){
-         action_popup.alert("그걸 어떻게 얻었어?/n 좋은 생각이지만 아직은 아니야!");
+         action_popup.alert("그걸 어떻게 얻었어? \n 좋은 생각이지만 아직은 아니야!");
       return;
 }
 
@@ -51,7 +51,7 @@ if (files[0].name.startsWith('Item_edit')){
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('노래가 마음에 들지 않는거니? /n이 노래는 어때?');
+      action_popup.alert('노래가 마음에 들지 않는거니? \n이 노래는 어때?');
       return;
 }
 	
