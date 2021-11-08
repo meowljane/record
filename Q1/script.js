@@ -8,12 +8,12 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
@@ -27,7 +27,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+        alert('아이템은 하나씩 써. 천천히.');
         return;
     }
 	
@@ -41,20 +41,34 @@ function uploadFiles(e) {
 
 
 if (files[0].name.startsWith('Item_톱니바퀴')){
-         action_popup.alert("좋은 생각이긴 한데...아직은 필요 없어 보여요");
+         action_popup.alert("그걸 어떻게 얻었어?/n 좋은 생각이지만 아직은 아니야!");
       return;
 }
 
 if (files[0].name.startsWith('Item_edit')){
-      action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
+      action_popup.alert('그건 이제 지워도 될 것 같은데?');
       return;
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('지금 노래가 맘에 안드신다는거죠? 어디 이 노래는 어때요?\n문제 풀이랑은 상관 없어요. 분위기나 바꿔보려는거예요.');
+      action_popup.alert('노래가 마음에 들지 않는거니? /n이 노래는 어때?');
       return;
 }
-else if (files[0].name.startsWith('Item_')){action_popup.alert("좋은 생각이긴 한데...아직은 필요 없어 보여요");
+	
+	
+if (files[0].name.startsWith('Item_동전')){
+      action_popup.alert('뭐야~ 바닥에서 주운거야?');
+      return;
+}
+	
+	
+if (files[0].name.startsWith('Item_발톱')){
+      action_popup.alert('윽 뭐야.. 누구거야..?');
+      return;
+}
+	
+	
+else if (files[0].name.startsWith('Item_')){action_popup.alert("그건 어디서 가져온거야?");
       return;
 }
 	
