@@ -68,16 +68,20 @@ if (files[0].name.startsWith('Item_소환마법')){
       return;
 }	
 if (files[0].name.startsWith('Item_동전')){
-      action_popup.alert('뭐야~ 바닥에서 주운거야?');
+      action_popup.alert('확실히 우리가 쓰는 동전과는 다르네!');
       return;
 }
 	
 	
 if (files[0].name.startsWith('Item_발톱')){
-      action_popup.alert('윽 뭐야.. 누구거야..?');
+      action_popup.alert('큰 짐승의 것인가봐...');
       return;
 }
-	
+
+	if (files[0].name.startsWith('Item_조각')){
+      action_popup.alert('우와 뭐야? 되게 어지럽게 생겼다!');
+      return;
+}
 	
 else if (files[0].name.startsWith('Item_')){action_popup.alert("어디서 찾은거야...?");
       return;
