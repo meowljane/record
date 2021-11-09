@@ -8,12 +8,12 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
@@ -27,7 +27,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+        action_popup.alert('하나만 꺼내서 써. 아이템이 너무 많아!');
         return;
     }
 
@@ -37,24 +37,54 @@ function uploadFiles(e) {
       audio.play();
       return;
       }
+	
+if (files[0].name.startsWith('Item_주사위')){
+         action_popup.alert("확실히 저게 주사위같긴 해. \n 하지만 지금 할 일은 아니야!");
+      return;
+}
 
 if (files[0].name.startsWith('Item_edit')){
-     action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
+      action_popup.alert('그건 이제 지워도 될 것 같은데?');
+      return;
+}
+	
+if (files[0].name.startsWith('Item_keyword')){
+      action_popup.alert('그 아이템은 이제 버리도록 해.');
       return;
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+      action_popup.alert('노래가 마음에 들지 않는거니? \n이 노래는 어때?');
+      return;
+}
+
+if (files[0].name.startsWith('Item_빛마법')){
+      action_popup.alert('진짜 아름다워... \n 있잖아 나는 반짝이는게 너무 좋아');
       return;
 }
 
 if (files[0].name.startsWith('Item_소환마법')){
-      action_popup.alert('그게 아니에요. 여기 너무 어둡지 않아요?');
+      action_popup.alert('있지 그 마법 함부로 쓰지 마! \n 가끔 저주가 소환될 수 있대..');
+      return;
+}	
+if (files[0].name.startsWith('Item_동전')){
+      action_popup.alert('뭐야~ 바닥에서 주운거야?');
       return;
 }
-
+	
+	
+if (files[0].name.startsWith('Item_발톱')){
+      action_popup.alert('윽 뭐야.. 누구거야..?');
+      return;
+}
+	
+	
+else if (files[0].name.startsWith('Item_')){action_popup.alert("어디서 찾은거야...?");
+      return;
+}
+	
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('응? 그건 뭐야..?무서워...');
       return;
     }
 }
