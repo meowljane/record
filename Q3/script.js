@@ -68,7 +68,7 @@ if (files[0].name.startsWith('Item_고무호스')){
 	
 	
 if (files[0].name.startsWith('Item_구슬')){
-      action_popup.alert('반짝반짝한게 제법 예쁘다 이거!');
+      action_popup.alert('새로운 구슬은 필요 없을 것 같아!');
       return;
 }
 
@@ -77,7 +77,7 @@ if (files[0].name.startsWith('Item_구슬')){
       return;
 }
 	
-else if (files[0].name.startsWith('Item_')){action_popup.alert("이걸 어떻게 지금 가지고 있어...?");
+else if (files[0].name.startsWith('Item_')){action_popup.alert("이 문제는 아이템 없이도 풀 수 있을 것 같지 않아?");
       return;
 }
 	
