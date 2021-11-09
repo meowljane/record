@@ -27,7 +27,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('아이템은 하나씩 써. 천천히.');
+        action_popup.alert('아이템은 하나씩 써. 천천히.');
         return;
     }
 	
