@@ -49,6 +49,11 @@ if (files[0].name.startsWith('Item_edit')){
       action_popup.alert('그건 이제 지워도 될 것 같은데?');
       return;
 }
+	if (files[0].name.startsWith('Item_keyword')){
+      action_popup.alert('그 아이템은 이제 버리도록 해.');
+      return;
+}
+	
 
 if (files[0].name.startsWith('Item_음악마법')){
       action_popup.alert('노래가 마음에 들지 않는거니? \n이 노래는 어때?');
