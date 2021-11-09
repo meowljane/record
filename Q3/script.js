@@ -8,12 +8,12 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
@@ -26,36 +26,67 @@ function uploadFiles(e) {
   
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
-    if (files.length > 1) {
-        action_popup.alert('하나만 올려주세요.');
+   if (files.length > 1) {
+        action_popup.alert('하나씩 해~ 침착하라구!');
         return;
     }
-
-    if (files[0].name.startsWith('Item_빛마법')){
-	action_popup.alert('전 문제 덕분에 이곳은 점점 밝아지고 있어요');
-      return;
-      }
+	
 
 if (files[0].name.startsWith('Item_edit')){
-      action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
+      action_popup.alert('이게 뭐야 그건 이제 버려!');
+      return;
+}
+	
+if (files[0].name.startsWith('Item_keyword')){
+      action_popup.alert('그건 버리라니까!.');
       return;
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+      action_popup.alert('그만그만. 이제 생각나는 음악도 없단 말이야!');
+      return;
+}
+
+if (files[0].name.startsWith('Item_빛마법')){
+      action_popup.alert('깜짝이야! 너~ 이제 마법으로 날 놀리려 하는구나!');
       return;
 }
 
 if (files[0].name.startsWith('Item_소환마법')){
-      action_popup.alert('이 문제는 아이템 없이 풀 수 있을지도 몰라요');
+      action_popup.alert('있지 그 마법 함부로 쓰지 마! \n 가끔 저주가 소환될 수 있대..');
+      return;
+}
+	
+if (files[0].name.startsWith('Item_확대마법')){
+      action_popup.alert('나 솔직히 이게 일반 돋보기랑 뭐가 다른지 모르겠어. 안그래?');
+      return;
+}
+if (files[0].name.startsWith('Item_고무호스')){
+      action_popup.alert('좋은 생각이긴 해! \n하지만 지금 쓸건 아니야.');
+      return;
+}
+	
+	
+if (files[0].name.startsWith('Item_구슬')){
+      action_popup.alert('반짝반짝한게 제법 예쁘다 이거!');
       return;
 }
 
+	if (files[0].name.startsWith('Item_조각')){
+      action_popup.alert('으으...미안해 나 이런거 잘 못해...');
+      return;
+}
+	
+else if (files[0].name.startsWith('Item_')){action_popup.alert("이걸 어떻게 지금 가지고 있어...?");
+      return;
+}
+	
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('이 세상의 물건이 아닌 것 같은데...');
       return;
     }
 }
+
 
 $(".modal_close").on("click", function () {
       action_popup.close(this);
