@@ -53,7 +53,7 @@ if (files[0].name.startsWith('Item_빛마법')){
 }
 
 if (files[0].name.startsWith('Item_소환마법')){
-      action_popup.alert('있지 그 마법 함부로 쓰지 마! \n 가끔 저주가 소환될 수 있대..');
+      action_popup.alert('너 그거 계속 남용하다가 \n 실수로 흑마법 나오는거 아니야?..');
       return;
 }
 	
