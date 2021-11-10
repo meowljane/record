@@ -37,6 +37,7 @@ function uploadFiles(e) {
       $('#Q').animate({'opacity': 1}, {'duration': 2500, 'queue': false});
       var audio = new Audio("./done.mp3");
       audio.play();
+	    trig= on;
       return;}
 
 
@@ -73,8 +74,10 @@ if (files[0].name.startsWith('Item_발톱')){
 }
 	
 	
-else if (files[0].name.startsWith('Item_')){action_popup.alert("그건 어디서 가져온거야?");
-      return;
+else if(files[0].name.startsWith('Item_')) {
+	if (set=on;){action_popup.alert("그건 어디서 가져온거야?")}
+	else{action_popup.alert("일단 소환부터 해보자!");
+      return;}
 }
 	
 else{
