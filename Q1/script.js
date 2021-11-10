@@ -19,6 +19,8 @@ function dragOver(e){
     }
 }
 
+trig=off; 
+
 function uploadFiles(e) {
     e.stopPropagation();
     e.preventDefault();
