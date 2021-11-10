@@ -74,8 +74,8 @@ if (files[0].name.startsWith('Item_발톱')){
 }
 	
 	
-else if(files[0].name.startsWith('Item_')) {
-	if (trig=on;){action_popup.alert("그건 어디서 가져온거야?")}
+else if(files[0].name.startsWith('Item_')&&trig=on) {
+	if (trig==on;){action_popup.alert("그건 어디서 가져온거야?")}
 	else{action_popup.alert("일단 소환부터 해보자!");
       return;}
 }
