@@ -58,8 +58,8 @@ if (files[0].name.startsWith('Item_음악마법')){
       return;
 }
 
-if (files[0].name.startsWith('Item_빛마법')){
-      action_popup.alert('진짜 아름다워... \n 있잖아 나는 반짝이는게 너무 좋아');
+if (files[0].name.startsWith('Item_색마법')){
+      action_popup.alert('여기 너무 어두워서 아무것도 안보여');
       return;
 }
 
@@ -67,14 +67,14 @@ if (files[0].name.startsWith('Item_소환마법')){
       action_popup.alert('있지 그 마법 함부로 쓰지 마! \n 가끔 저주가 소환될 수 있대..');
       return;
 }	
-if (files[0].name.startsWith('Item_동전')){
-      action_popup.alert('확실히 우리가 쓰는 동전과는 다르네!');
+if (files[0].name.startsWith('Item_반지')){
+      action_popup.alert('뭐야? 나 주려고? 히히');
       return;
 }
 	
 	
-if (files[0].name.startsWith('Item_발톱')){
-      action_popup.alert('큰 짐승의 것인가봐...');
+if (files[0].name.startsWith('Item_유연제')){
+      action_popup.alert('뭔진 몰라도 아무거나 마시지 마!');
       return;
 }
 
@@ -83,8 +83,10 @@ if (files[0].name.startsWith('Item_발톱')){
       return;
 }
 	
-else if (files[0].name.startsWith('Item_')){action_popup.alert("어디서 찾은거야...?");
-      return;
+else if(files[0].name.startsWith('Item_')) {
+	if (trig=='on'){action_popup.alert("그건 어디서 가져온거야?")}
+	else{action_popup.alert("여기 너무 어두운 것 같지 않니..?");
+      return;}
 }
 	
 else{
