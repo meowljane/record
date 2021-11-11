@@ -8,12 +8,12 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
@@ -27,31 +27,47 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        action_popup.alert('하나만 올려주세요.');
+        action_popup.alert('더이상 소란은 싫어...하나씩 하자');
         return;
     }
 
 
-if (files[0].name.startsWith('Item_톱니바퀴')){
-      action_popup.alert('좋은 생각입니다만, 굳이 지금 할 필요가 있을까요?');
+    if (files[0].name.startsWith('Item_edit')){
+      action_popup.alert('이젠 여기다가 버리고 가자...');
       return;
 }
 
-if (files[0].name.startsWith('Item_edit')){
-     action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
+if (files[0].name.startsWith('Item_keyword')){
+  action_popup.alert('그만 버리는거 어때?');
+  return;
+}
+
+if (files[0].name.startsWith('Item_음악마법')){
+      action_popup.alert('쉬잇... 제발...무서워...');
       return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
-     action_popup.alert('지금 노래가 맘에 안드신다는거죠? 어디 이 노래는 어때요?\n문제 풀이랑은 상관 없어요. 분위기나 바꿔보려는거예요.');
-      return;
+if (files[0].name.startsWith('Item_빛마법')){
+  action_popup.alert('지금은 최대한 눈에 띄지 말아야해');
+  return;
+}
+
+if (files[0].name.startsWith('Item_조각')){
+  action_popup.alert('빨리 풀고 도망가고 싶어');
+  return;
+}
+
+if (files[0].name.startsWith('Item_')){
+  action_popup.alert('아이템은 필요 없을지도 몰라...');
+  return;
 }
 
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('나 너무 무서워, 장난치지 말아줘.');
       return;
     }
 }
+
 
 $(".modal_close").on("click", function () {
       action_popup.close(this);
