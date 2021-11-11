@@ -2,16 +2,16 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>tutorial1</title>
+  <title>Q4</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <div id="box" style="width:800px;">
   <div id="Q1">
-    <img src="elephant.png" class="item" style="z-index: 3;">
-    <img src="cat.png" class="item" style="z-index: 2;">
-    <img src="frog.png" class="item"  style="z-index: 1;">
+    <img src="elephant.png" class="item" id="one" style="z-index: 3;">
+    <img src="cat.png" class="item" id="two" style="z-index: 2;">
+    <img src="frog.png" class="item" id="three" style="z-index: 1;">
   </div>
   <div id="Q2">
   </div>
@@ -40,6 +40,7 @@
 height: 400px;
 background-image: url(./Q1.png);
 transition: 1.5s;
+filter : saturate(0%)
 }   
 
 #Q2{position: absolute; 
@@ -52,7 +53,10 @@ transition: 1.5s;
 
 .item{top: -200px;
 opacity : 0.6;
-mix-blend-mode: color-burn;}
+mix-blend-mode: color-burn;
+}
+
+
 	
 *{
 cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}

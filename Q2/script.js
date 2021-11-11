@@ -19,6 +19,8 @@ function dragOver(e){
     }
 }
 
+trig='off';
+
 function uploadFiles(e) {
     e.stopPropagation();
     e.preventDefault();
@@ -35,6 +37,7 @@ function uploadFiles(e) {
       $('#Q2').fadeIn(2000);
       var audio = new Audio("./done.mp3");
       audio.play();
+      trig='on';
       return;
       }
 	

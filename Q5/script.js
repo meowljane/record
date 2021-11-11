@@ -8,13 +8,13 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
-			"outline-offset": "0px"
+			"background-color": "rgba(0,0,0,0.1)",
+			"outline-offset": "-10px"
 		});
     }
 }
@@ -32,7 +32,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        action_popup.alert('하나만 올려주세요.');
+        action_popup.alert('공간이 좁아.하나씩 써봐.');
         return;
     }
 
@@ -46,6 +46,7 @@ function uploadFiles(e) {
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
+            action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
           }}
         if (files[0].name.startsWith('Item_조각B')){
           bonoff='good'
@@ -53,6 +54,7 @@ function uploadFiles(e) {
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
+            action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
           }}
         if (files[0].name.startsWith('Item_조각C')){
           conoff='good'
@@ -60,6 +62,7 @@ function uploadFiles(e) {
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
+            action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
           }}
         if (files[0].name.startsWith('Item_조각D')){
           donoff='good'
@@ -67,17 +70,23 @@ function uploadFiles(e) {
             $('#frame').css({"opacity" :"1" , "z-index" : "2"});
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
+            action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
           }}
         }
 
 
     else if (files[0].name.startsWith('Item_조각')){
-    action_popup.alert('퍼즐을 올리는건 맞지만 거기가 아니에요');
+    action_popup.alert('조각을 올리는 건 맞지만 거기가 아닌 것 같아!');
     return;
     }
 
+    else if (files[0].name.startsWith('Item_')){
+      action_popup.alert('내가 보기에 여기엔 조각을 올려야해!');
+      return;
+      }
+
     else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('그게 뭐야..? 난생 처음 보는걸.');
       return;}
     }
 
