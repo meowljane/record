@@ -8,16 +8,20 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
 }
+
+
+trig='off';
+
 
 function uploadFiles(e) {
     e.stopPropagation();
@@ -27,35 +31,53 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        action_popup.alert('하나만 올려주세요.');
+        action_popup.alert('여기에 그렇게 많은건 필요 없어.');
         return;
     }
 
-    if (files[0].name.startsWith('Item_구슬')){
+    if (files[0].name.startsWith('Item_구슬')&&trig=='off'){
       $('#Q2').fadeIn(2000);
       $('#btn').css('display','block')
       var audio = new Audio("./done.mp3");
       audio.play();
+      trig='on';
+      action_popup.alert('됐다! 설명서를 읽고 게임을 해보자.');
       return;
       }
 
 if (files[0].name.startsWith('Item_edit')){
-      action_popup.alert('그 아이템은 이제 필요 없어요. 버려주세요');
+      action_popup.alert('이쯤되면 날 놀리는거지?');
       return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
-      action_popup.alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+if (files[0].name.startsWith('Item_keyword')){
+  action_popup.alert('그거 언제 버릴거야..?');
+  return;
+}
+
+if (files[0].name.startsWith('Item_음악마법')){
+      action_popup.alert('쉿.... 경비병들이 들을라...!');
       return;
 }
 
-if (files[0].name.startsWith('Item_상자')){
-      action_popup.alert('그게 아니에요. 여기 너무 어둡지 않아요?');
+if (files[0].name.startsWith('Item_소환마법')){
+      action_popup.alert('지금은 도움이 되지 않을 것 같아');
       return;
 }
 
+if (files[0].name.startsWith('Item_빛마법')){
+  action_popup.alert('무서워... 그런 장난은 그만둬...');
+  return;
+}
+
+else if(files[0].name.startsWith('Item_')) {
+	if (trig=='on'){action_popup.alert("어서 문제를 풀고 도망가자")}
+	else{action_popup.alert("약한 벽돌들이 있어. 부술 방법이 있을까?");
+      return;}
+}
+	
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('날 무섭게 하지 말아줘...이게 뭐야?');
       return;
     }
 }
