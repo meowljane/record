@@ -2,12 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>tutorial1</title>
+  <title>A1</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<body style="background-color:#000000;">
-<div style="text-align : center;">
+<body>
+  <div id="box" style="width:800px;">
   <div id="Q">
   </div>
 <div id="item">
@@ -16,25 +16,40 @@
 </div>
 </div>
 
+<section class="modal modal-section type-alert">
+  <div class="enroll_box">
+      <p class="menu_msg"></p>
+  </div>
+  <div class="enroll_btn">
+      <button class="btn pink_btn modal_close">확인</button>
+  </div>
+</section>
 
 <style>
 #content{position: absolute;
     left: 300px;
-    bottom: 80px;}
+    top: 400px;}
 
-#Q{position: relative;
-  bottom: 80px;
+#Q{position: absolute;
+  top: -100px;
   width: 800px;
 height: 600px;
 background-image: url(./문제1단계.png);}   
 
-  body{
-cursor: url(https://assetstorev1-prd-cdn.unity3d.com/preview/0182cd3d.7174be4d-0c6f-447f-a009-50b122fd9a7a.png), default;}
-#content{
-  cursor: url(https://assetstorev1-prd-cdn.unity3d.com/preview/0182cd23.9c005633-687c-4260-a4e4-a06d2cc534f1.png), pointer;}
-
-
+*{
+cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+#content, #btn, button {
+    cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+} 
+#box{margin:0 auto; position: relative;}
+.modal .btn{border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+.modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+.modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+.menu_msg{font-size: 21px;font-weight: 500;}
+.enroll_box p{padding-bottom: 56px;}
+.pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
 </style>
+
 
  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

@@ -8,16 +8,18 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
 }
+
+trig='off';
 
 function uploadFiles(e) {
     e.stopPropagation();
@@ -27,34 +29,86 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+        alert('여러개를 한번에 보라는 건가..?');
         return;
     }
 
-    if (files[0].name.startsWith('고무호스')){
+    if (files[0].name.startsWith('Item_고무호스')&&trig=='off'){
       $('#Q2').fadeIn(2000);
       var audio = new Audio("./done.mp3");
+      action_popup.alert('구슬 관 양 끝을 호스로 이었다.');
       audio.play();
+      trig= 'on';
       return;
       }
 
-if (files[0].name.startsWith('튜토리얼')){
-      alert('그 아이템은 이제 필요 없어요. 버려주세요');
+      if (files[0].name.startsWith('Item_edit')){
+            action_popup.alert('....');
+            return;
+      }
+            if (files[0].name.startsWith('Item_keyword')){
+            action_popup.alert('이걸 왜 가지고 있지?');
+            return;
+      }
+
+      if (files[0].name.startsWith('Item_음악마법')){
+            action_popup.alert('음악을 생각하면 미야가 떠오른다.');
+            return;
+      }
+
+
+if (files[0].name.startsWith('Item_소환마법')){
+      action_popup.alert('복수를 위해 쓰일 마법서');
       return;
 }
 
-if (files[0].name.startsWith('CD')){
-      alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
+if (files[0].name.startsWith('Item_색마법')){
+      action_popup.alert('미야...눈이 무슨 색이었지?');
       return;
 }
 
-if (files[0].name.startsWith('상자')){
-      alert('그게 아니에요. 여기 너무 어둡지 않아요?');
+if (files[0].name.startsWith('Item_톱니바퀴')){
+      action_popup.alert('이건 어디에 쓰일까');
       return;
+}
+
+if (files[0].name.startsWith('Item_주사위')){
+      action_popup.alert('이것도 미야의 미래를 점치지는 못했다.');
+      return;
+}
+
+else if(files[0].name.startsWith('Item_')) {
+	if (trig=='on'){action_popup.alert("아이템은 그만 보고 문제를 보자.")}
+	else{action_popup.alert("이미 봉인하고 없는 물건이다.");
+      return;}
 }
 
 else{
-      alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('이게 뭔데...?');
       return;
     }
 }
+
+
+$(".modal_close").on("click", function () {
+      action_popup.close(this);
+  });
+var action_popup = {
+      timer: 500,
+    alert: function (txt) {this.open("type-alert", txt);},
+  
+      open: function (type, txt) {
+          var popup = $("." + type);
+          popup.find(".menu_msg").text(txt);
+          $("body").append("<div class='dimLayer'></div>");
+          $(".dimLayer").css('height', $(document).height()).attr("target", type);
+          popup.fadeIn(this.timer);
+      },
+  
+      close: function (target) {
+          var modal = $(target).closest(".modal-section");
+          var dimLayer = $(".dimLayer[target=type-alert]")
+          modal.fadeOut(this.timer);
+          setTimeout(function () {dimLayer != null ? dimLayer.remove() : "";}, this.timer);
+      }
+  }

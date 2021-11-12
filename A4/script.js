@@ -31,7 +31,7 @@ function uploadFiles(e) {
         return;
     }
 
-    if (files[0].name.startsWith('색안경')){
+    if (files[0].name.startsWith('Item_색마법')){
       $('#Q1').css('filter', 'saturate(100%)');
       $('.item').css('opacity', '0.4');
       var audio = new Audio("./done.mp3");
