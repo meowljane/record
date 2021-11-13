@@ -29,7 +29,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('여러개를 한번에 보라는 건가..?');
+      action_popup.alert('여러개를 한번에 보라는 건가..?');
         return;
     }
 
@@ -59,11 +59,6 @@ function uploadFiles(e) {
 
 if (files[0].name.startsWith('Item_소환마법')){
       action_popup.alert('복수를 위해 쓰일 마법서');
-      return;
-}
-
-if (files[0].name.startsWith('Item_색마법')){
-      action_popup.alert('미야...눈이 무슨 색이었지?');
       return;
 }
 

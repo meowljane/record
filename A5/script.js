@@ -7,19 +7,20 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} 
     else {
     	$(e.target).css({
-			"background-color": "black",
-			"outline-offset": "0px"
+			"background-color": "rgba(0,0,0,0.1)",
+			"outline-offset": "-10px"
 		});
     }
 }
 
 var gearon = 'off';
+
 
 function uploadFiles(e) {
     e.stopPropagation();
@@ -30,20 +31,20 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+        action_popup.alert('하나씩...처리하자...');
         return;
     }
 
-if (files[0].name.match('puzzle')){
+    if (files[0].name.startsWith('Item_조각')){
     if(gearon=='on') {$(e.target).css({"background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
             "outline": "none",
             "background-size": "100% 100%",});
             return;}
-    else { alert('퍼즐을 올리는 것은 맞지만 아직 해야할 게 있어요.');return;}
+    else { action_popup.alert('좋은 생각이다. 그 전에 다른 작업이 필요하다.');return;}
 }
 
-if (files[0].name.match('톱니바퀴')){
-    $('.content').css({"background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
+if (files[0].name.startsWith('Item_톱니바퀴')){
+    $('.content').css({"background-image": "url(./톱니바퀴.png)",
                 "background-size": "100% 100%",});
     gearon = 'on';
     $('#click').css({"opacity": "1"});
@@ -51,8 +52,51 @@ if (files[0].name.match('톱니바퀴')){
     $('#Q1').css({"opacity": "0"});
     }
 
+
+  
+  if (files[0].name.startsWith('Item_edit')){
+        action_popup.alert('그것을 올리는 곳이 아니다.');
+        return;
+  }
+        if (files[0].name.startsWith('Item_keyword')){
+        action_popup.alert('그것을 올리는 곳이 아니다.');
+        return;
+  }
+  if (files[0].name.startsWith('Item_음악마법')){
+        action_popup.alert('제발...미야를 떠올리게 하지 마.');
+        return;
+  }
+  
+  
+  if (files[0].name.startsWith('Item_소환마법')){
+  action_popup.alert('그것을 올리는 곳이 아니다.');
+  return;
+  }
+  
+  if (files[0].name.startsWith('Item_주사위')){
+  action_popup.alert('그것을 올리는 곳이 아니다.');
+  return;
+  }
+  
+  if (files[0].name.startsWith('Item_고무호스')){
+    action_popup.alert('그것을 올리는 곳이 아니다.');
+    return;
+}
+
+
+  if (files[0].name.startsWith('Item_색마법')){
+        action_popup.alert('이렇게 미야를 사랑하게 되었을 때 앗아가다니..');
+        return;
+        }
+  
+
+    else if(files[0].name.startsWith('Item_')) {
+        action_popup.alert("이미 봉인하고 없는 물건이다.");
+  return;
+  }
+
 else{
-      alert('올바른 아이템을 올려주세요.');
+    action_popup.alert('그런것을 올렸다간 모든게 수포로 돌아간다.');
       return;
     }
 }
@@ -97,3 +141,29 @@ $(function () {
         $("#content4").stop().css({'transform': 'rotate('+angle+'deg)'},1000);}
     });
 });
+
+
+
+
+$(".modal_close").on("click", function () {
+    action_popup.close(this);
+});
+var action_popup = {
+    timer: 500,
+  alert: function (txt) {this.open("type-alert", txt);},
+
+    open: function (type, txt) {
+        var popup = $("." + type);
+        popup.find(".menu_msg").text(txt);
+        $("body").append("<div class='dimLayer'></div>");
+        $(".dimLayer").css('height', $(document).height()).attr("target", type);
+        popup.fadeIn(this.timer);
+    },
+
+    close: function (target) {
+        var modal = $(target).closest(".modal-section");
+        var dimLayer = $(".dimLayer[target=type-alert]")
+        modal.fadeOut(this.timer);
+        setTimeout(function () {dimLayer != null ? dimLayer.remove() : "";}, this.timer);
+    }
+}
