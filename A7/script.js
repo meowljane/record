@@ -212,16 +212,20 @@ function dragOver(e){
 	e.preventDefault();
 	if (e.type == "dragover") {
 		$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-20px"
 		});
 	} else {
     	$(e.target).css({
-			"background-color": "black",
+			"background-color": "rgba(0,0,0,0.1)",
 			"outline-offset": "-10px"
 		});
     }
 }
+
+
+trig='off';
+
 
 function uploadFiles(e) {
     e.stopPropagation();
@@ -231,34 +235,104 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+      action_popup.alert('어수선한건 질색이다.');
         return;
     }
 
-    if (files[0].name.startsWith('유연제')){
+    if (files[0].name.startsWith('Item_유연제')&&trig=='off'){
       $('#Q').css({'opacity': '0', 'z-index' : '-3'});
       var audio = new Audio("./done.mp3");
       audio.play();
+      trig= 'on';
       return;
       }
 
-if (files[0].name.startsWith('튜토리얼')){
-      alert('그 아이템은 이제 필요 없어요. 버려주세요');
-      return;
-}
+      if (files[0].name.startsWith('Item_유연제')&&trig=='on'){
+        action_popup.alert('더이상 부어대면 종이가 다 녹을것이다.');
+        return;
+  }
+  
+      if (files[0].name.startsWith('Item_edit')){
+        action_popup.alert('이것에 관한 정보는 도서관에 없다.');
+        return;
+  }
+        if (files[0].name.startsWith('Item_keyword')){
+        action_popup.alert('이것에 관한 저서는 없다.');
+        return;
+  }
+  if (files[0].name.startsWith('Item_음악마법')){
+        action_popup.alert('소유자의 심리에 따라 음악이 바뀐다고 한다.');
+        return;
+  }
+  
+  
+  if (files[0].name.startsWith('Item_소환마법')){
+  action_popup.alert('보물을 소환 혹은 봉인할 수 있다고 한다.');
+  return;
+  }
+  
+  if (files[0].name.startsWith('Item_톱니바퀴')){
+    action_popup.alert('마법 기계 장치의 뼈대 역을 해준다고 한다.');
+    return;
+    }
+  
+  if (files[0].name.startsWith('Item_주사위')){
+  action_popup.alert('숫자 5만 나오는 원리는 찾을 수 없었다.');
+  return;
+  }
+  
+  if (files[0].name.startsWith('Item_고무호스')){
+    action_popup.alert('라구 코끼리의 가죽은 무한정 늘어난다고 한다.');
+    return;
+  }
+  
+  
+  if (files[0].name.startsWith('Item_색마법')){
+        action_popup.alert('환상 마법이 아닌 실제 색을 입혀준다.');
+        return;
+        }
+  
+  if (files[0].name.startsWith('Item_조각')){
+  action_popup.alert('보물 봉인은 주로 이런식으로 이루어진다고 한다.');
+  return;
+  }
+  
+  if (files[0].name.startsWith('Item_동전')){
+    action_popup.alert('이 세계에 10개 이내의 수만 남아있다고 한다.');
+    return;
+    }
 
-if (files[0].name.startsWith('CD')){
-      alert('노래 말고 문제에 집중해주세요.\n틀 노래가 떨어져서 이러는건 아니에요.');
-      return;
-}
-
-if (files[0].name.startsWith('상자')){
-      alert('그게 아니에요. 여기 너무 어둡지 않아요?');
-      return;
-}
-
-else{
-      alert('올바른 아이템을 올려주세요.');
+    else if(files[0].name.startsWith('Item_')) {
+        action_popup.alert("이미 봉인하고 없는 물건이다.");
+  return;
+  }
+  
+  else{
+    action_popup.alert('외계의 물건에 대한 서적은 없다.');
       return;
     }
+  }
+
+  
+$(".modal_close").on("click", function () {
+  action_popup.close(this);
+});
+var action_popup = {
+  timer: 500,
+alert: function (txt) {this.open("type-alert", txt);},
+
+  open: function (type, txt) {
+      var popup = $("." + type);
+      popup.find(".menu_msg").text(txt);
+      $("body").append("<div class='dimLayer'></div>");
+      $(".dimLayer").css('height', $(document).height()).attr("target", type);
+      popup.fadeIn(this.timer);
+  },
+
+  close: function (target) {
+      var modal = $(target).closest(".modal-section");
+      var dimLayer = $(".dimLayer[target=type-alert]")
+      modal.fadeOut(this.timer);
+      setTimeout(function () {dimLayer != null ? dimLayer.remove() : "";}, this.timer);
+  }
 }

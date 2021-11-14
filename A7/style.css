@@ -1,7 +1,16 @@
-
-body {
-  background: #000;}
-
+#box{margin:0 auto; position: relative;}
+*{
+  cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+  #content, #btn, button, .tips{
+      cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+  } 
+  .modal .btn{cursor: pointer;border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+  .modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+  .modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+  .menu_msg{font-size: 21px;font-weight: 500;}
+  .enroll_box p{padding-bottom: 56px;}
+  .pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
+  
 #Q{opacity: 1;
   transition : 1s;
   position: absolute;
@@ -22,7 +31,7 @@ body {
   outline-offset:-10px;  
   text-align: center;
   transition: all .15s ease-in-out;
-  background-color: black;}
+  background-color: rgba(0,0,0,0.1);}
 
 #content img, #content video{
     width:100%;
@@ -54,8 +63,8 @@ background-image: url(./Q2.png);
   position: absolute;
   width: 30px;
   height: 26px;
-  bottom: -151.5px;
-  left: -203.5px;
+  bottom: -152px;
+  left: -206px;
   z-index: 3;
 background: red;
 background: #f9f9f9; /* Old browsers */
@@ -71,8 +80,8 @@ background: linear-gradient(45deg, #f9f9f9 2%,#ddd 49%,#111111 51%,#111111 78%,#
   position: fixed;
   width: 30px;
   height: 26px;
-  bottom: -151.5px;
-  right: 1347.5px;
+  bottom: -152px;
+  right: 1346px;
   z-index: 3;
 background: red;
 background: #f9f9f9; /* Old browsers */
@@ -89,7 +98,7 @@ background: linear-gradient(-45deg, #f9f9f9 2%,#ddd 49%,#111111 51%,#111111 78%,
   width: 30px;
   height: 26px;
   top: 1000px;
-  right: 1347.5px;
+  right: 1346px;
   z-index: 3;
 background: red;
 background: #f9f9f9; /* Old browsers */
@@ -106,7 +115,7 @@ background: linear-gradient(-135deg, #f9f9f9 2%,#ddd 49%,#111111 51%,#111111 78%
   width: 30px;
   height: 26px;
   top: 1000px;
-  left: -203.5px;
+  left: -206px;
   z-index: 3;
 background: red;
 background: #f9f9f9; /* Old browsers */
@@ -136,6 +145,3 @@ box-shadow: 0px 10px 4px #000;
   -webkit-transform: rotate(87deg) translate3d(-14px,2px,0);
   box-shadow: 0px 10px 4px #000;
 }
-/*.view:hover .transparent_view {
-  -webkit-transform: translate3d(0,0,0);
-}*/

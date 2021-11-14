@@ -2,27 +2,37 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Folding paper</title>
+  <title>A7</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
+  <div id="box" style="width:800px">
   <div id="Q">
   </div>
   <div class="view"> 
      <div class="transparent_view">
          <span class="shadow_right"></span>
          <span class="shadow_left"></span>
-        <span id="tip"></span>
-<span id="tip2"></span>
-<span id="tip3"></span>
-<span id="tip4"></span>
+        <span id="tip" class="tips"></span>
+<span id="tip2" class="tips"> </span>
+<span id="tip3" class="tips"></span>
+<span id="tip4" class="tips"></span>
      </div>
   </div>  
 
 <div id="content">
 </div>
+</div>
 
+<section class="modal modal-section type-alert">
+  <div class="enroll_box">
+      <p class="menu_msg"></p>
+  </div>
+  <div class="enroll_btn">
+      <button class="btn pink_btn modal_close">확인</button>
+  </div>
+</section>
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
