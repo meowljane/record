@@ -2,16 +2,15 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>tutorial1</title>
+  <title>A16</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 
 
-<body style="background-color:#000000;">
+<body>
 
 <div id="box" style="width:800px;">
-<div id="box" style="width:800px;"><br></div><div id="box" style="width:800px;"><br></div><div id="box" style="width:800px;">
 <div id="crossword" draggable="true"></div>
 <img src="./문제.png" id="문제">
 <img src="./문제2.png" id="문제2">
@@ -19,36 +18,58 @@
 <div id="content"></div>
 </div>
 
+<section class="modal modal-section type-alert">
+  <div class="enroll_box">
+    <p class="menu_msg"></p>
+  </div>
+  <div class="enroll_btn">
+    <button class="btn pink_btn modal_close">확인</button>
+  </div>
+</section>
+
+
 
 <style>
 #문제{position: absolute;
 opacity: .8; 
 width:800px;
 height:638px;
-z-index=10;
+z-index:10;
 }
 #문제2{position: absolute;
 opacity: 1; 
 width:800px;
 height:638px;
-z-index=8;
+z-index:8;
 }
 #공백{position: absolute;
 opacity: 1; 
 width:800px;
 height:430px;
-z-index=2;
+z-index:2;
 }
 #crossword{position: absolute;
  left: 300px;
   top: 30px;
-z-index=5;}
+z-index:5;}
 #content{position: absolute;
     left: 300px;
     top: 500px;
-z-index=15;}
-#box{margin:0 auto; position: relative;}
+z-index:15;}
+*{
+cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+#content, #btn, button, #지도{
+    cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+} 
+  
+.modal .btn{border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+.modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+.modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+.menu_msg{font-size: 21px;font-weight: 500;}
+.enroll_box p{padding-bottom: 56px;}
+.pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
 
+#box{margin:0 auto; position: relative;}
 </style>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
