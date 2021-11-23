@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>page 1</title>
+	<meta charset="UTF-8" />
+	<script src="LocalConnection.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		p1version = 'none';
+		set = 'none';
+
+		function getver() {
+
+			//첫번째
+
+			if (700 <= window.outerWidth) {
+				p1version = 0;
+				$('.box').css('background-color', '#FFFFFF');
+			}
+
+			//두번째
+
+			else if (600 <= window.outerWidth) {
+				p1version = 1;
+				var onetwo = new LocalConnection({
+					name: 'onetwo',
+					debug: true
+				});
+				this.pollsquare = function () {
+					var R1p = window.screenLeft + window.outerWidth;
+					var L1p = window.screenLeft;
+					var T1p = window.screenTop + window.outerHeight - window.innerHeight;
+					var B1p = window.screenTop + window.outerHeight;
+					onetwo.send('square1', R1p, L1p, T1p, B1p, p1version);
+					setTimeout(this.pollsquare, 20);
+				}
+				setTimeout(this.pollsquare, 20);
+			}
+
+
+			//세번째
+
+			else if (500 <= window.outerWidth) {
+				p1version = 0
+				$('.box').css('background-color', '#FFFFFF');
+			}
+
+
+			//네번째. 안되면 죽이겠다
+
+
+			else if (400 <= window.outerWidth) {
+				p1version = 2
+				var onetwo = new LocalConnection({
+					name: 'onetwo',
+					debug: true
+				});
+
+				this.pollsquare = function () {
+					var R1p = window.screenLeft + window.outerWidth;
+					var L1p = window.screenLeft;
+					var T1p = window.screenTop + window.outerHeight - window.innerHeight;
+					var B1p = window.screenTop + window.outerHeight;
+					onetwo.send('square1', R1p, L1p, T1p, B1p, p1version);
+					setTimeout(this.pollsquare, 20);
+				}
+				setTimeout(this.pollsquare, 20);
+			}
+
+			//다섯번째
+
+			else if (300 <= window.outerWidth) {
+				p1version = 3
+				var onetwo = new LocalConnection({
+					name: 'onetwo',
+					debug: true
+				});
+
+				this.pollsquare = function () {
+					var R1p = window.screenLeft + window.outerWidth;
+					var L1p = window.screenLeft;
+					var T1p = window.screenTop + window.outerHeight - window.innerHeight;
+					var B1p = window.screenTop + window.outerHeight;
+					onetwo.send('square1', R1p, L1p, T1p, B1p, p1version);
+					setTimeout(this.pollsquare, 20);
+				}
+				setTimeout(this.pollsquare, 20);
+			}
+
+			//여섯번째 어이가없네~~~~~~
+
+			else {
+				p1version = 0
+				$('.box').css('background-color', '#FFFFFF');
+			}
+		}
+
+		function init() {
+			setInterval(getver, 1000);
+		}
+
+		init();
+
+
+		var threeone = new LocalConnection({
+			name: 'threeone',
+			debug: true
+		});
+
+		threeone.listen();
+
+		threeone.addCallback('finalset', function (set1, set2, set3) {
+			if (set1 == 1) {
+				$('.ver1').css('background-color', '#FFC2D1');
+				$('.non1').css('background-color', '#FFFFFF');
+			}
+
+			else if (set2 == 1) {
+				$('.ver2').css('background-color', '#FFC2D1');
+				$('.non2').css('background-color', '#FFFFFF');
+			}
+
+			else if (set3 == 1) {
+				$('.ver3').css('background-color', '#FFC2D1');
+				$('.non3').css('background-color', '#FFFFFF');
+			}
+
+			else { $('.box').css('background-color', '#FFFFFF'); }
+		});
+
+		window.setTimeout('window.location.reload()', 13000);
+	</script>
+</head>
+
+<style>
+	html,
+	body {
+		-ms-overflow-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+
+
+	div {
+		background-size: cover;
+		width: 100px !important;
+		height: 100px !important;
+		float: left;
+		position: relative;
+	}
+</style>
+
+<body>
+	<div class="box box23 non1 non2 non3" style="background-image: url('./1.png');"></div>
+	<div style="background-image: url('./2.png'); background-color:#FFC2D1;"></div>
+	<div class="box box24 ver1 ver2 ver3" style="background-image: url('./3.png');"></div>
+	<div class="box box34 ver1 ver2 non3" style="background-image: url('./4.png');"></div>
+	<div class="box box23 ver1 non2 ver3" style="background-image: url('./5.png');"></div>
+	<div class="box box24 ver1 non2 ver3" style="background-image: url('./6.png');"></div>
+	<div class="box box13 non1 non2 non3" style="background-image: url('./7.png');"></div>
+	<div class="box box12 non1 ver2 ver3" style="background-image: url('./8.png');"></div>
+	<div class="box box24 non1 non2 ver3" style="background-image: url('./9.png');"></div>
+	<div class="box box12 ver1 non2 non3" style="background-image: url('./10.png');"></div>
+	<div class="box box14 ver1 non2 non3" style="background-image: url('./11.png');"></div>
+	<div class="box des non1 non2 ver3" style="background-image: url('./12.png');"></div>
+	<button onclick="alert(set)"></button>
+</body>
+
+</html>

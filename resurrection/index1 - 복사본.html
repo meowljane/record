@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>back</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<script>
+
+  $('.des3').css('display', 'none');
+
+</script>
+
+<body>
+  <div class="des1" onclick="window.open('./page1.html','page1','width=200 height=600 left=50 resizable=yes')"></div>
+  <div class="des2"
+    onclick="window.open('./page2.html','page2','width=200 height=600 left=150 resizable=yes');return false"></div>
+  <div class="des3"
+    onclick="window.open('./page3.html','page3','width=200 height=600 left=250 resizable=yes');return false"></div>
+  <p> </br></br></br></br></br>안녕하세요 테스터님.</br>
+    테스트에 앞서 간단한 확인 과정을 거쳐주세요.</br></br>
+    1.브라우저의 줌(확대/축소)가 100%로 되어있는지 확인해주세요.</br>
+    2.추가기능이 필요하다는 알림이 뜨면 냥부엉에게 알려주세요. </br>(확인도 눌러주세요..ㅠㅠ이상한거 아님!)</br>
+    3.창 크기 조절이 되지 않는다면 냥부엉에게 알려주세요.</br>
+    4.시간이 오래 지나면 창 렉이 걸릴 수 있어요. 새로고침으로 렉을 풀어주세요!ㅠㅠ</br>
+    5.뭔가 시키는대로 한 것 같은데 변화가 없다면 냥부엉에게 알려주세요.
+    </br></br>
+    >>>준비되셨다면 위 세개의 버튼을 눌러 창을 열어주세요!!!<<< </br></br></br></br></br>
+      [How to Play]</br>
+      시작부분에서부터 쭉 관을 연결해 포션을 만들어주세요!</br>
+      세 창은 합쳐서 직사각형을 이루어야 합니다.</br>
+      (데모라서 불안정해요 최대한 창을 딱맞게 조그맣게 만들어주세요 ㅠㅠ)</br>
+      다음은 관이 연결된 예시입니다!</br>
+
+      <img src="./예시.PNG" width="800" height="400">
+
+  </p>
+  <audio loop="" id="clear">
+    <source src="./party.mp3" type="audio/mp3">
+  </audio>
+  <audio id="tutorial" autoplay="autoplay" loop>
+    <source src="./poniko.mp3" type="audio/mp3">
+  </audio>
+
+
+  <style>
+    .des1 {
+      float: left;
+      position: relative;
+      background-image: url(./12.png);
+    }
+
+    .des2 {
+      float: left;
+      position: relative;
+      background-image: url(./24.png);
+    }
+
+    .des3 {
+      float: left;
+      position: relative;
+      background-image: url(./36.png);
+    }
+
+    div {
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+    }
+
+    html,
+    body {
+      -ms-overflow-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
