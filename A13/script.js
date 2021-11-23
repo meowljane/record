@@ -113,17 +113,17 @@ function uploadFiles(e) {
     }
 
     if (files[0].name.startsWith('Item_톱니바퀴')) {
-        action_popup.alert('봉인에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
+        action_popup.alert('부활에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
         return;
     }
 
     if (files[0].name.startsWith('Item_주사위')) {
-        action_popup.alert('봉인에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
+        action_popup.alert('부활에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
         return;
     }
 
     if (files[0].name.startsWith('Item_고무호스')) {
-        action_popup.alert('봉인에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
+        action_popup.alert('부활에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
         return;
     }
 
@@ -139,7 +139,7 @@ function uploadFiles(e) {
     }
 
     if (files[0].name.startsWith('Item_동전')) {
-        action_popup.alert('봉인에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
+        action_popup.alert('부활에 대한 정보가 숨겨진 장소를 찾아내야 한다..');
         return;
     }
 
