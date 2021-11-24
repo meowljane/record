@@ -107,6 +107,11 @@ if (files[0].name.startsWith('Item_발톱')) {
   action_popup.alert('구멍을 내봤자 도움될 것이 없다.');
   return;
 }
+	
+	if (files[0].name.startsWith('Item_열쇠')) {
+  action_popup.alert('부활에 대한 정보가 있는 두번째 장소를 찾아야한다.');
+  return;
+}
 
 if (files[0].name.startsWith('Item_지도')&& trig == 'on') {
   action_popup.alert('지도는 이미 올라가 있다.');
