@@ -38,6 +38,10 @@ if (files[0].name.startsWith('Item_톱니바퀴')){
       $('#Q').css({"background-image": "url(./Q2.gif)",
                   "outline": "none",
                   "background-size": "100% 100%"});
+	        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
       trig= 'on';
       return;
       }
