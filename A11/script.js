@@ -43,7 +43,10 @@ if (files[0].name.startsWith('Item_지도.png') && trig == 'off') {
   })
     .draggable();
   $('#문제').css({ "pointer-events": "none", "user-select": "none", "z-index": "+=10" });
-
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
   return;
 }
 
