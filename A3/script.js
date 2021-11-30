@@ -35,9 +35,11 @@ function uploadFiles(e) {
 
     if (files[0].name.startsWith('Item_고무호스')&&trig=='off'){
       $('#Q2').fadeIn(2000);
-      var audio = new Audio("./done.mp3");
       action_popup.alert('구슬 관 양 끝을 호스로 이었다.');
-      audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
       trig= 'on';
       return;
       }
