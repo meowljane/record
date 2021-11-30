@@ -36,8 +36,10 @@ function uploadFiles(e) {
 
       if (files[0].name.startsWith('Item_주사위')&&dice=='off') {
             $('#Q2').draggable().fadeIn(2000);
-            var audio = new Audio("./done.mp3");
-            audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
             action_popup.alert('좋아...근데 주사위 구멍이 더 필요해.');
             dice = 'on'
             return;
@@ -45,8 +47,10 @@ function uploadFiles(e) {
 
       if (files[0].name.startsWith('Item_발톱') && dice == 'on') {
             $('#Q2').draggable().css({ 'background-image': 'url(./Q3.png)' });
-            var audio = new Audio("./done.mp3");
-            audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
             trig = 'on'
             return;
       }
