@@ -241,8 +241,10 @@ function uploadFiles(e) {
 
     if (files[0].name.startsWith('Item_유연제')&&trig=='off'){
       $('#Q').css({'opacity': '0', 'z-index' : '-3'});
-      var audio = new Audio("./done.mp3");
-      audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
       trig= 'on';
       return;
       }
