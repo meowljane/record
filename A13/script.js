@@ -62,6 +62,8 @@ function uploadFiles(e) {
     if (files[0].name.startsWith('Item_지도') && map == 'off') {
         $('#map').attr("src", window.URL.createObjectURL(files[0]))
         var audio = new Audio("./done.mp3");
+                $('#bgm').animate({volume: 0.3}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
         audio.play();
         map = 'on'
         if (mag == 'off') {
@@ -83,6 +85,8 @@ function uploadFiles(e) {
     if (files[0].name.startsWith('Item_발톱') && mag == 'on') {
         $('#mag').draggable().css({ 'background-image': 'url(./mag.png)' });
         var audio = new Audio("./done.mp3");
+                $('#bgm').animate({volume: 0.3}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
         audio.play();
         claw = 'on'
         if (map == 'on') {
