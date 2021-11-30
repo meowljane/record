@@ -50,8 +50,10 @@ if (files[0].name.startsWith('Item_톱니바퀴')){
     $('#click').css({"opacity": "1"});
     $('#Q2').css({"opacity": "1"});
     $('#Q1').css({"opacity": "0"});
-	var audio = new Audio("./done.mp3");
-      audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
 	return;
     }
 
