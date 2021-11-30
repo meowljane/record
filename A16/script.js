@@ -45,8 +45,10 @@ function uploadFiles(e) {
       .draggable();
     $('#문제').css({ "pointer-events": "none", "user-select": "none", "z-index": "+=10" });
     $('#문제2').css({ "pointer-events": "none", "user-select": "none", "z-index": "+=5" });
-    var audio = new Audio("./done.mp3");
-    audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
     return;
   }
 
