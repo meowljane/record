@@ -35,8 +35,10 @@ function uploadFiles(e) {
 
     if (files[0].name.startsWith('Item_주사위')){
       $('#Q2').fadeIn(2500);
-      var audio = new Audio("./done.mp3");
-      audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
       trig= 'on';
       return;
       }
