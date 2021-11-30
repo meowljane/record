@@ -32,7 +32,7 @@ function uploadFiles(e) {
     }
 
     if (files[0].name.startsWith('Item_색마법')&&trig=='off'){
-	$('#bgm').animate({volume: 0}, 500);
+	$('#bgm').animate({volume: 0.3}, 500);
       $('#Q2').fadeIn(2000);
       $('#Q1').css({'transition':'1s', 'opacity':'0', });
       var audio = new Audio("./done.mp3");
