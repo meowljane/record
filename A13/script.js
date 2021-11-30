@@ -36,6 +36,8 @@ function uploadFiles(e) {
 
     if (files[0].name.startsWith('Item_확대마법') && mag == 'off') {
         $('#mag').draggable().fadeIn(2000);
+        $('#bgm').animate({volume: 0}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
         var audio = new Audio("./done.mp3");
         audio.play();
         $('*').css('cursor', 'none')
