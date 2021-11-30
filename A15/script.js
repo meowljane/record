@@ -36,8 +36,10 @@ function uploadFiles(e) {
             $('#이후판').css({ "background-image": "url(./이후판.png)", "transition": "1.5s", "opacity": "1" });
             $('#이전판').css({ "transition": "1.5s", "opacity": "0" });
             $('#길').css({ "transform": "rotate(180deg) translateY(-6px)", "transition": "2s" });
-            var audio = new Audio("./done.mp3");
-            audio.play();
+        $('#bgm').animate({volume: 0.1}, 500);
+        setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
+        var audio = new Audio("./done.mp3");
+        audio.play();
             trig = 'on';
             return;
       }
