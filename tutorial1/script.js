@@ -38,7 +38,6 @@ if (files[0].name.match(/Item_음악마법.png/)){
 $('#튜토5').animate({'opacity': 1}, {'duration': 2500, 'queue': false})
 .css({"display":"block"});
 $('#튜토4,#content').css({"display":"none"});
-$("#tutorial")[0].pause();
 $("#clear")[0].play();
 $("#clear")[0].volume =0.2;
 }
