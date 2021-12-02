@@ -52,7 +52,18 @@ if (files[0].name.startsWith('Item_keyword')){
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('목장 느낌 나는 음악이란거, 신기한 것 같아..');
+	if(track==1){action_popup.alert('화창한 들판에 어울리는 음악이네!');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('좋아 이 음악도 잘 어울릴 것 같아!');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else if(track==3){action_popup.alert('목장에 딱 어울리는 음악이야');
+		     $("#track3")[0].pause(); $("#track4")[0].play();
+		    track=4}
+	else {action_popup.alert('첫 음악이 제일 좋았던 것 같아. \n 다시 듣자');
+		     $("#track4")[0].pause(); $("#track1")[0].play();
+		    track=1}
       return;
 }
 
