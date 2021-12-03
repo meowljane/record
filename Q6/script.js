@@ -43,7 +43,18 @@ if (files[0].name.startsWith('Item_keyword')){
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('이 경치에 이 음악 너무 로맨틱해..');
+	if(track==1){action_popup.alert('응...반짝반짝 빛나는 듯한 음악이다');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('나 정말 모험 떠나길 잘한 것 같아!');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else if(track==3){action_popup.alert('음악이랑 이곳 정말 잘 어울려..');
+		     $("#track3")[0].pause(); $("#track4")[0].play();
+		    track=4}
+	else {action_popup.alert('처음 음악이 다시 듣고싶어!');
+		     $("#track4")[0].pause(); $("#track1")[0].play();
+		    track=1}
       return;
 }
 
