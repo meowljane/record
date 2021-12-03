@@ -43,10 +43,20 @@ if (files[0].name.startsWith('Item_keyword')){
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('여기서는 뭔가... \n그래 경건한 노래가 잘 어울려');
+	if(track==1){action_popup.alert('엄청 웅장한 음악이네\n 명예의 전당이라 그런가?');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('오징어 게임이 뭔데?');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else if(track==3){action_popup.alert('여기 울리는걸 보니 굉장히 넓은가봐');
+		     $("#track3")[0].pause(); $("#track4")[0].play();
+		    track=4}
+	else {action_popup.alert('처음 음악으로 돌아가는 것 같은데!');
+		     $("#track4")[0].pause(); $("#track1")[0].play();
+		    track=1}
       return;
 }
-
 if (files[0].name.startsWith('Item_확대마법')){
       action_popup.alert('자세히 보지 말고 큰 형태를 봐봐!');
       return;
