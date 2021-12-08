@@ -22,6 +22,15 @@
   background-image: url('./Q1.png');
   z-index: 3;}
 
+ #Q2{ position: absolute;
+    top: 500px;
+    left: 150px;
+  width: 500px;
+  height: 50px;
+background-size: cover;
+background-image: url('./Q2.png');} 
+
+
 #content{position: absolute;
   left: 300px;
   top: 550px;
