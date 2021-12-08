@@ -22,6 +22,7 @@ var aonoff = 'bad';
 var bonoff = 'bad';
 var conoff = 'bad';
 var donoff = 'bad';
+puzzledone='off';
 
 function uploadFiles(e) {
     e.stopPropagation();
@@ -47,6 +48,7 @@ function uploadFiles(e) {
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
             action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
+	setTimeout(function() { if(trig=='off'){action_popup.alert('아직...아이템을 더 사용해야 할 것 같아...');}}, 15000);
           }}
         if (files[0].name.startsWith('Item_조각B')){
           bonoff='good'
@@ -55,6 +57,7 @@ function uploadFiles(e) {
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
             action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
+            setTimeout(function() { if(trig=='off'){action_popup.alert('아직...아이템을 더 사용해야 할 것 같아...');}}, 15000);
           }}
         if (files[0].name.startsWith('Item_조각C')){
           conoff='good'
@@ -63,6 +66,7 @@ function uploadFiles(e) {
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
             action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
+            setTimeout(function() { if(trig=='off'){action_popup.alert('아직...아이템을 더 사용해야 할 것 같아...');}}, 15000);
           }}
         if (files[0].name.startsWith('Item_조각D')){
           donoff='good'
@@ -71,6 +75,7 @@ function uploadFiles(e) {
             $('.content').css({"opacity" :"0" , "z-index" : "0"});
             $('#content').css({"opacity" :"1" , "z-index" : "2"});
             action_popup.alert('대단해! 미로가 나왔어. \n WASD키로 움직여봐!');
+            setTimeout(function() { if(trig=='off'){action_popup.alert('아직...아이템을 더 사용해야 할 것 같아...');}}, 15000);
           }}
         }
 
