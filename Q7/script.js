@@ -122,7 +122,7 @@ if (files[0].name.startsWith('Item_edit')){
 }
 
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('그런건 이 도서관에서 찾을 수 없어..');
       return;
     }
 }
