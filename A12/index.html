@@ -13,10 +13,11 @@
 </audio>
   
 <div id="box" style="width:800px;">
-<img src="./qr.png" class="qr" id="조각1" style="position: absolute;left: 350px;top: 50px;">
-<img src="./one.png" class="mark" id="조각2" style="position: absolute;left: 100px;top: 250px;">
-<img src="./two.png" class="mark" id="조각3" style="position: absolute;left: 325px;top: 250px;">
-<img src="./three.png" class="mark" id="조각4" style="position: absolute;left: 550px;top: 250px;">
+  <img src="./Q1.png" class="Q1 drag" id="조각1" style="position: absolute;left: -50px;top: 10px;">
+<img src="./qr.png" class="qr drag" id="조각1" style="position: absolute;left: 600px;top: 65px;">
+<img src="./one.png" class="mark drag" id="조각2" style="position: absolute;left: 100px;top: 250px;">
+<img src="./two.png" class="mark drag" id="조각3" style="position: absolute;left: 325px;top: 250px;">
+<img src="./three.png" class="mark drag" id="조각4" style="position: absolute;left: 550px;top: 250px;">
 <div id="content">
 </div>
 </div>
@@ -37,6 +38,7 @@
     left: 300px;
   top: 500px;}
 
+  .Q1{width:600px;height : 225px;}
 
   .qr{
   width: 100px;
@@ -69,7 +71,7 @@ cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/162910922
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script  src="./script.js"></script>
 <script>
-    $( '.mark').draggable();
+    $( '.drag').draggable();
 </script>
 
 </body>
