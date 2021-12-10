@@ -110,7 +110,7 @@
 
 		threeone.listen();
 
-		threeone.addCallback('finalset', function (set1, set2, set3) {
+		threeone.addCallback('finalset', function (set1, set2, set3, set4) {
 			if (set1 == 1) {
 				$('.ver1').css('background-color', '#FFC2D1');
 				$('.non1').css('background-color', '#FFFFFF');
@@ -126,7 +126,23 @@
 				$('.non3').css('background-color', '#FFFFFF');
 			}
 
-			else { $('.box').css('background-color', '#FFFFFF'); }
+			else if (set4 == 1) {
+				$('.box').css('background-color', '#FFFFFF'); 
+				$('#box2').css('background-image', 'url("./no2.png")');
+				$('#box3').css('background-image', 'url("./no3.png")');
+				$('#box5').css('background-image', 'url("./no5.png")');
+				$('#box6').css('background-image', 'url("./no6.png")');
+				$('#box8').css('background-image', 'url("./no8.png")');
+				$('#box9').css('background-image', 'url("./no9.png")');
+			}
+
+			else { $('.box').css('background-color', '#FFFFFF'); 
+				$('#box2').css('background-image', 'url("./2.png")');
+				$('#box3').css('background-image', 'url("./3.png")');
+				$('#box5').css('background-image', 'url("./5.png")');
+				$('#box6').css('background-image', 'url("./6.png")');
+				$('#box8').css('background-image', 'url("./8.png")');
+				$('#box9').css('background-image', 'url("./9.png")');}
 		});
 
 		window.setTimeout('window.location.reload()', 13000);
@@ -159,14 +175,14 @@
 
 <body>
 	<div class="box box23 non1 non2 non3" style="background-image: url('./1.png');"></div>
-	<div style="background-image: url('./2.png'); background-color:#FFC2D1;"></div>
-	<div class="box box24 ver1 ver2 ver3" style="background-image: url('./3.png');"></div>
+	<div id="box2" style="background-image: url('./2.png'); background-color:#FFC2D1;"></div>
+	<div class="box box24 ver1 ver2 ver3" id="box3" style="background-image: url('./3.png');"></div>
 	<div class="box box34 ver1 ver2 non3" style="background-image: url('./4.png');"></div>
-	<div class="box box23 ver1 non2 ver3" style="background-image: url('./5.png');"></div>
-	<div class="box box24 ver1 non2 ver3" style="background-image: url('./6.png');"></div>
+	<div class="box box23 ver1 non2 ver3" id="box5" style="background-image: url('./5.png');"></div>
+	<div class="box box24 ver1 non2 ver3" id="box6" style="background-image: url('./6.png');"></div>
 	<div class="box box13 non1 non2 non3" style="background-image: url('./7.png');"></div>
-	<div class="box box12 non1 ver2 ver3" style="background-image: url('./8.png');"></div>
-	<div class="box box24 non1 non2 ver3" style="background-image: url('./9.png');"></div>
+	<div class="box box12 non1 ver2 ver3" id="box8" style="background-image: url('./8.png');"></div>
+	<div class="box box24 non1 non2 ver3" id="box9" style="background-image: url('./9.png');"></div>
 	<div class="box box12 ver1 non2 non3" style="background-image: url('./10.png');"></div>
 	<div class="box box14 ver1 non2 non3" style="background-image: url('./11.png');"></div>
 	<div class="box des non1 non2 ver3" style="background-image: url('./12.png');"></div>

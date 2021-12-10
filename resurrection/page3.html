@@ -38,7 +38,8 @@
 					var set1 = 1;
 					var set2 = 0;
 					var set3 = 0;
-					threeone.send('finalset', set1, set2, set3);
+					var set4 = 0;
+					threeone.send('finalset', set1, set2, set3, set4);
 					setTimeout(this.pollsquare, 20);
 				}
 				setTimeout(this.pollsquare, 20);
@@ -59,7 +60,8 @@
 					var set1 = 0;
 					var set2 = 1;
 					var set3 = 0;
-					threeone.send('finalset', set1, set2, set3);
+					var set4 = 0;
+					threeone.send('finalset', set1, set2, set3, set4);
 					setTimeout(this.pollsquare, 20);
 				}
 				setTimeout(this.pollsquare, 20);
@@ -68,7 +70,6 @@
 
 
 			else if (p2version == 3 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T2p + 200 - T3p]) < 30 && Math.abs([L2p - L3p]) < 30) {
-				twoversion = 3;
 				$('.ver3').css('background-color', '#FFC2D1');
 				$('.non3').css('background-color', '#FFFFFF');
 
@@ -80,14 +81,44 @@
 					var set1 = 0;
 					var set2 = 0;
 					var set3 = 1;
-					threeone.send('finalset', set1, set2, set3);
+					var set4 = 0;
+					threeone.send('finalset', set1, set2, set3, set4);
 					setTimeout(this.pollsquare, 20);
 				}
 				setTimeout(this.pollsquare, 20);
 
 			}
+
+			else if (p2version == 4 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T3p + 200 - T2p]) < 30 && Math.abs([L2p - L3p]) < 30) {
+				twoversion = 4;
+				$('.box').css('background-color', '#FFFFFF');
+				$('#box25').css('background-image', 'url("./no25.png")');
+				$('#box26').css('background-image', 'url("./no26.png")');
+				$('#box31').css('background-image', 'url("./no31.png")');
+				$('#box32').css('background-image', 'url("./no32.png")');
+				var threeone = new LocalConnection({
+					name: 'threeone',
+					debug: true
+				});
+				this.pollsquare = function () {
+					var set1 = 0;
+					var set2 = 0;
+					var set3 = 0;
+					var set4 = 1;
+					threeone.send('finalset', set1, set2, set3, set4);
+					setTimeout(this.pollsquare, 20);
+				}
+				setTimeout(this.pollsquare, 20);
+
+			}
+
+
 			else {
 				$('.box').css('background-color', '#FFFFFF');
+				$('#box25').css('background-image', 'url("./25.png")');
+				$('#box26').css('background-image', 'url("./26.png")');
+				$('#box31').css('background-image', 'url("./31.png")');
+				$('#box32').css('background-image', 'url("./32.png")');
 				twoversion = 0;
 
 				var threeone = new LocalConnection({
@@ -98,7 +129,8 @@
 					var set1 = 0;
 					var set2 = 0;
 					var set3 = 0;
-					threeone.send('finalset', set1, set2, set3);
+					var set4 = 0;
+					threeone.send('finalset', set1, set2, set3, set4);
 					setTimeout(this.pollsquare, 20);
 				}
 				setTimeout(this.pollsquare, 20);
@@ -135,14 +167,14 @@
 </style>
 
 <body>
-	<div class="box box24 ver1 ver2 ver3" style="background-image: url('./25.png');"></div>
-	<div class="box box34 ver1 ver2 ver3" style="background-image: url('./26.png');"></div>
+	<div class="box box24 ver1 ver2 ver3" id="box25" style="background-image: url('./25.png');"></div>
+	<div class="box box34 ver1 ver2 ver3" id="box26" style="background-image: url('./26.png');"></div>
 	<div class="box box23 non1 non2 non3" style="background-image: url('./27.png');"></div>
 	<div class="box box34 non1 non2 non3" style="background-image: url('./28.png');"></div>
 	<div class="box box13 ver1 non2 non3" style="background-image: url('./29.png');"></div>
 	<div class="box box13 non1 ver2 non3" style="background-image: url('./30.png');"></div>
-	<div class="box box24 ver1 non2 ver3" style="background-image: url('./31.png');"></div>
-	<div class="box box14 ver1 non2 ver3" style="background-image: url('./32.png');"></div>
+	<div class="box box24 ver1 non2 ver3" id="box31" style="background-image: url('./31.png');"></div>
+	<div class="box box14 ver1 non2 ver3" id="box32" style="background-image: url('./32.png');"></div>
 	<div class="box box14 non1 non2 non3" style="background-image: url('./33.png');"></div>
 	<div class="box box12 non1 ver2 non3" style="background-image: url('./34.png');"></div>
 	<div class="box box24 non1 ver2 non3" style="background-image: url('./35.png');"></div>
