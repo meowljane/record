@@ -39,7 +39,7 @@
 			whatisT1pT2p = Math.abs([T1p - T2p]);
 			whatisT1pB2p = Math.abs([T1p + 200 - B2p]);
 			whatisL1pL2p = Math.abs([L1p + 300 - L2p]);
-			if (p1version == 3 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T1p - T2p]) < 10 && Math.abs([T1p + 200 - B2p]) < 15 && Math.abs([L1p + 300 - L2p]) < 15) {
+			if (p1version == 3 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T1p - T2p]) < 30  && Math.abs([L1p + 300 - L2p]) < 30) {
 				oneversion = 3;
 				//3페이지에 ver3 전송
 				var twothree = new LocalConnection({
@@ -59,7 +59,7 @@
 				setTimeout(this.pollsquare, 20);
 				//여기까지
 			}
-			else if (p1version == 1 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T1p + 200 - T2p]) < 10 && Math.abs([B1p - T2p]) < 15 && Math.abs([L1p - L2p]) < 15) {
+			else if (p1version == 1 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T1p + 200 - T2p]) < 30 && Math.abs([L1p - L2p]) < 30) {
 				oneversion = 1;
 				//3페이지에 ver1 전송
 				var twothree = new LocalConnection({
@@ -83,7 +83,7 @@
 
 
 
-			else if (p1version == 2 && 400 <= window.outerWidth && window.outerWidth < 500 && Math.abs([T1p - T2p]) < 10 && Math.abs([L1p + 400 - L2p]) < 15) {
+			else if (p1version == 2 && 400 <= window.outerWidth && window.outerWidth < 500 && Math.abs([T1p - T2p]) < 30 && Math.abs([L1p + 400 - L2p]) < 30) {
 				oneversion = 2;
 				//3페이지에 ver2 전송
 				var twothree = new LocalConnection({
@@ -194,7 +194,6 @@
 	<div class="box box14 non3 ver2 non1" style="background-image: url('./22.png');"></div>
 	<div class="box box13 non3 non2 non1" style="background-image: url('./23.png');"></div>
 	<div class="box des non3 non2 ver1" style="background-image: url('./24.png');"></div>
-	<button onclick="alert(oneversion +','+ p2version+','+whatisT1pT2p+','+whatisT1pB2p+','+whatisL1pL2p)"></button>
 
 </body>
 

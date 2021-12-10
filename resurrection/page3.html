@@ -25,7 +25,7 @@
 			var R3p = window.screenLeft + window.outerWidth;
 			var T3p = window.screenTop + window.outerHeight - window.innerHeight;
 			var B3p = window.screenTop + window.outerHeight;
-			if (p2version == 1 && 300 <= window.outerWidth && window.outerWidth < 400 && Math.abs([T3p + 200 - T2p]) < 15 && Math.abs([L2p + 600 - L3p]) < 15) {
+			if (p2version == 1 && 300 <= window.outerWidth && window.outerWidth < 400 && Math.abs([T3p + 200 - T2p]) < 30 && Math.abs([L2p + 600 - L3p]) < 30) {
 				twoversion = 1;
 				$('.ver1').css('background-color', '#FFC2D1');
 				$('.non1').css('background-color', '#FFFFFF');
@@ -46,7 +46,7 @@
 
 
 
-			else if (p2version == 2 && 400 <= window.outerWidth && window.outerWidth < 500 && Math.abs([T3p - T2p]) < 15 && Math.abs([L2p + 400 - L3p]) < 15) {
+			else if (p2version == 2 && 400 <= window.outerWidth && window.outerWidth < 500 && Math.abs([T3p - T2p]) < 30 && Math.abs([L2p + 400 - L3p]) < 30) {
 				twoversion = 2;
 				$('.ver2').css('background-color', '#FFC2D1');
 				$('.non2').css('background-color', '#FFFFFF');
@@ -67,7 +67,7 @@
 
 
 
-			else if (p2version == 3 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T2p + 200 - T3p]) < 20 && Math.abs([L2p - L3p]) < 15 && Math.abs([B2p - T3p]) < 20) {
+			else if (p2version == 3 && 600 <= window.outerWidth && window.outerWidth < 700 && Math.abs([T2p + 200 - T3p]) < 30 && Math.abs([L2p - L3p]) < 30) {
 				twoversion = 3;
 				$('.ver3').css('background-color', '#FFC2D1');
 				$('.non3').css('background-color', '#FFFFFF');
@@ -147,7 +147,6 @@
 	<div class="box box12 non1 ver2 non3" style="background-image: url('./34.png');"></div>
 	<div class="box box24 non1 ver2 non3" style="background-image: url('./35.png');"></div>
 	<div class="box des non1 ver2 non3" style="background-image: url('./36.png');"></div>
-	<button onclick="alert(twoversion)"></button>
 </body>
 
 </html>
