@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>A13</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  
+    <audio id="bgm" autoplay="autoplay" loop>
+ <source src="./Menuet.mp3" type="audio/mp3">
+</audio>
+  
+  <div id="box" style="width:1000px;">
+    <div id="container">
+    <div id="지도">
+      <img id="map" src="./빈지도.png">  
+    </div>
+    <div id="mag">
+    </div>
+  </div>
+  <div id="content">
+  </div>
+  </div>
+
+  
+<section class="modal modal-section type-alert dial">
+  <div  class="enroll_box dial">
+    <p class="menu_msg dial"></p>
+  </div>
+  <div class="enroll_btn">
+    <button class="btn pink_btn modal_close">확인</button>
+  </div>
+</section>
+
+<style>
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#content{position: absolute;
+    left: 375px;
+    top: 900px;}
+
+#지도{
+  max-width: 1000px;
+  margin: 25px;
+transition : background-image 1s;
+}  
+
+#지도 img {
+  max-width: 1000px;
+}
+
+#mag {
+  display: none;
+  position: absolute;
+      width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 50px solid transparent;
+    background: url(./mag전.png) center/100% 100% border-box;
+  overflow: hidden;
+  cursor: none;
+  opacity: 1;
+}
+
+#mag img {
+  position: absolute;
+  right: 0;
+}
+
+*{
+cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default;}
+#content, #btn, button, #지도{
+    cursor: url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer;
+} 
+  
+.modal .btn{border: 1px solid #999999;text-align: center;border-radius: 5px;outline: none;font-weight: 500;}
+.modal{width: 300px;height: 252px;border-radius: 10px;padding: 50px 24px;box-sizing: border-box;text-align: center;}
+.modal-section{background: #c4c4c4;box-sizing: border-box;display: none;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);display: none;z-index: 9999;}
+.menu_msg{font-size: 21px;font-weight: 500;}
+.enroll_box p{padding-bottom: 56px;}
+.pink_btn {width: 90px;background: #303030;color: #fff;height: 36px;line-height: 36px;transition: 0.5s;font-size: 17px;border: none;}
+
+#box{margin:0 auto; position: relative;}
+</style>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="./script.js"></script>
+  <script>
+  $( function() {
+    $(".item").draggable();
+  } );
+  </script>
+
+</body>
+</html>
