@@ -43,7 +43,7 @@ function uploadFiles(e) {
         $('*').css('cursor', 'none')
         $('.dial').css('cursor', 'url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C1_1.png), default')
         $('button').css('cursor', 'url(https://www.thelabyrinth.co.kr/labyrinth/upload/quest/3440/1629109221972/%EC%BB%A4%EC%84%9C2.png), pointer')
-
+        $('#단서2').css('opacity', '1');
         mag = 'on'
         if (map == 'off') {
             action_popup.alert('돋보기로 무얼 봐야하지?');
@@ -65,6 +65,7 @@ function uploadFiles(e) {
                 $('#bgm').animate({volume: 0.1}, 500);
         setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
         audio.play();
+        $('#단서1').css('opacity', '1');
         map = 'on'
         if (mag == 'off') {
             action_popup.alert('지도를 볼 도구가 필요하다.');
@@ -89,6 +90,7 @@ function uploadFiles(e) {
         setTimeout(function() {$('#bgm').animate({volume: 1}, 500);}, 10000);
         audio.play();
         claw = 'on'
+        $('#단서3').css('opacity', '1');
         if (map == 'on') {
             action_popup.alert('모든 준비가 끝났다.');
             return;

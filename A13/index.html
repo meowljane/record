@@ -13,6 +13,13 @@
 </audio>
   
   <div id="box" style="width:1000px;">
+    <div style="left: 75px;position: relative; width: 850px; height: 400px;">
+    <img src="빈단서.png" style="position: absolute;">
+    <img src="단서1.png" class="단서"  id="단서1">
+    <img src="단서2.png" class="단서"  id="단서2">
+    <img src="단서3.png" class="단서"  id="단서3">
+    
+  </div>
     <div id="container">
     <div id="지도">
       <img id="map" src="./빈지도.png">  
@@ -35,6 +42,9 @@
 </section>
 
 <style>
+.단서{position :absolute;
+opacity:0;
+transition : opacity 1s;}
 
 #container {
   display: flex;
@@ -43,7 +53,7 @@
 
 #content{position: absolute;
     left: 375px;
-    top: 900px;}
+    top: 1250px;}
 
 #지도{
   max-width: 1000px;
