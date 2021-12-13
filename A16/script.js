@@ -40,7 +40,7 @@ function uploadFiles(e) {
       "background-size": "100% 100%",
       "z-index": "5",
       "width": "800px",
-      "height": "638px"
+      "height": "636px"
     })
       .draggable();
     $('#문제').css({ "pointer-events": "none", "user-select": "none", "z-index": "+=10" });
