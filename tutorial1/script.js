@@ -28,13 +28,13 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+        action_popup.alert('하나만 올려주세요.');
         return;
     }
 if (files[0].name.startsWith('Item')){
 	
 	
-if (files[0].name.match(/Item_음악마법.png/)){
+if (files[0].name.startsWith('Item_음악마법')){
 $('#튜토5').animate({'opacity': 1}, {'duration': 2500, 'queue': false})
 .css({"display":"block"});
 $('#튜토4,#content').css({"display":"none"});
@@ -44,13 +44,13 @@ $("#clear")[0].volume =0.2;
 }
 
     else{
-      alert('그게 뭔가요?\n여기서 쓰이는 것 같긴 한데...');
+      action_popup.alert('그게 뭔가요?\n여기서 쓰이는 것 같긴 한데...');
       return;}
 
   }	
 	
 else{
-      alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('올바른 아이템을 올려주세요.');
       return;
     }
 }
