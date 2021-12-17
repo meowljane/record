@@ -27,7 +27,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려주세요.');
+        action_popup.alert('하나만 올려주세요.');
         return;
     }
 	
@@ -40,18 +40,18 @@ audio.play();
 return;
 }
 
-if (files[0].name.startsWith('Item_CD')){
-  alert('그 시도에 박수를 보냅니다.\n하지만 지금은 튜토리얼에 집중해 주세요!');
+if (files[0].name.startsWith('Item_음악마법')){
+  action_popup.alert('흘륭한 시도예요.\n하지만 지금은 튜토리얼에 집중해 주세요!');
   }
 		
 		    else{
-      alert('그게 뭔가요?\n여기서 쓰이는 것 같긴 한데...');
+     action_popup.alert('그게 뭔가요?\n여기서 쓰이는 것 같긴 한데...');
       return;}
 
   }
 
 else{
-      alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('올바른 아이템을 올려주세요.');
       return;
     }
 }
