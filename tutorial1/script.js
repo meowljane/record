@@ -54,3 +54,27 @@ else{
       return;
     }
 }
+
+
+$(".modal_close").on("click", function () {
+      action_popup.close(this);
+  });
+var action_popup = {
+      timer: 500,
+    alert: function (txt) {this.open("type-alert", txt);},
+  
+      open: function (type, txt) {
+          var popup = $("." + type);
+          popup.find(".menu_msg").text(txt);
+          $("body").append("<div class='dimLayer'></div>");
+          $(".dimLayer").css('height', $(document).height()).attr("target", type);
+          popup.fadeIn(this.timer);
+      },
+  
+      close: function (target) {
+          var modal = $(target).closest(".modal-section");
+          var dimLayer = $(".dimLayer[target=type-alert]")
+          modal.fadeOut(this.timer);
+          setTimeout(function () {dimLayer != null ? dimLayer.remove() : "";}, this.timer);
+      }
+  }
