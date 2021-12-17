@@ -34,7 +34,7 @@ function uploadFiles(e) {
 	if (files[0].name.startsWith('Item')){
 
 if (files[0].name.startsWith('Item_keyword')){
-$('#키워드열쇠').css({"display":"block"}).draggable();
+$('#키워드열쇠').fadeIn(2000);
 var audio = new Audio("./done.mp3");
 audio.play();
 return;
