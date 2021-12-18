@@ -27,10 +27,38 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        action_popup.alert('하나만 올려주세요.');
+        action_popup.alert('이제 마지막인데 천천히 하자!!.');
         return;
     }
 
+iles[0].name.startsWith('Item_edit')){
+      action_popup.alert('너 진짜~! 아직도 가지고 있니!');
+      return;
+}
+	if (files[0].name.startsWith('Item_keyword')){
+      action_popup.alert('이걸 끝까지 들고 오다니....');
+      return;
+}
+	
+
+if (files[0].name.startsWith('Item_음악마법')){
+      action_popup.alert('음...얼마 안남았는데 집중하자!');
+      return;
+}	
+	
+if (files[0].name.startsWith('Item_동전')){
+      action_popup.alert('뭐야~ 바닥에서 주운거야?');
+      return;
+}
+	
+	
+if (files[0].name.startsWith('Item_발톱')){
+      action_popup.alert('윽 뭐야.. 누구거야..?');
+      return;
+}
+		
+	
+	
 if (files[0].name.startsWith('Item_크로스워드')){
 $('#crossword').css({"background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
             "outline": "none",
@@ -44,7 +72,7 @@ $('#content').css({"pointer-events":"none","user-select":"none","z-index":"-=15"
 }
 
 else{
-      action_popup.alert('올바른 아이템을 올려주세요.');
+      action_popup.alert('그건 난생 처음 보는데...');
       return;
     }
 }
