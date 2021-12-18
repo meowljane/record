@@ -68,10 +68,20 @@ if (files[0].name.startsWith('Item_keyword')){
  return;
 }
 
-if (files[0].name.startsWith('Item_음악마법')){
-  action_popup.alert('너가 들려주는 음악을 들으며 하는 모험이 좋아');
-  return;
+
+	if (files[0].name.startsWith('Item_음악마법')){
+	if(track==1){action_popup.alert('너가 들려주는 음악을 들으며 하는 모험이 좋아');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('봉인 풀면서 음악 듣는거 너무 기분 좋다');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else {action_popup.alert('그거 들려줘! 처음 들려준거!!');
+		     $("#track3")[0].pause(); $("#track1")[0].play();
+		    track=1}
+      return;
 }
+	
 
 if (files[0].name.startsWith('Item_소환마법')){
   action_popup.alert('이왕이면 고양이같은 귀여운게 소환되면 좋겠다');
