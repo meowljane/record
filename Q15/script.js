@@ -119,10 +119,20 @@ if (files[0].name.startsWith('Item_keyword')){
   return;
 }
 
-if (files[0].name.startsWith('Item_음악마법')){
-  action_popup.alert('앞으로도 평생 나에게 음악 들려줘야해~');
-  return;
+	
+	if (files[0].name.startsWith('Item_음악마법')){
+	if(track==1){action_popup.alert('앞으로도 평생 나에게 음악 들려줘야해~');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('매일 아침마다 너가 음악으로 깨워주면 되겠다');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else {action_popup.alert('좋아~ 처음 음악 다시 들어도 될까?');
+		     $("#track3")[0].pause(); $("#track1")[0].play();
+		    track=1}
+      return;
 }
+	
 
 if (files[0].name.startsWith('Item_빛마법')){
   action_popup.alert('날 위해 켜주는거야? 고마워...');
