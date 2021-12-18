@@ -74,15 +74,10 @@ if (files[0].name.startsWith('Item_음악마법')){
 	if(track==1){action_popup.alert('으으...여기 분위기는 음산한데 \n노래 덕분에 좀 나은 것 같아');
 		     $("#track1")[0].pause(); $("#track2")[0].play();
 		    track=2}
-	else if(track==2){action_popup.alert('좀더 활기찬 음악을 들려줄래?');
-		     $("#track2")[0].pause(); $("#track3")[0].play();
-		    track=3}
-	else if(track==3){action_popup.alert('좋아..이 음악이 더 잘 어울릴 것 같아!');
-		     $("#track3")[0].pause(); $("#track4")[0].play();
-		    track=4}
-	else {action_popup.alert('더 생각나는 음악도 없어! \n원래대로 돌려줄게!!');
-		     $("#track4")[0].pause(); $("#track1")[0].play();
+	else{action_popup.alert('방금 게 더 활기찼던 것 같아');
+		     $("#track2")[0].pause(); $("#track1")[0].play();
 		    track=1}
+
       return;
 }
 
