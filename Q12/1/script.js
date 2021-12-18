@@ -47,10 +47,17 @@ if (files[0].name.startsWith('Item_keyword')){
   return;
 }
 
-if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('그래.. 별이랑 너랑 음악.. 더 바랄게 없네');
+	
+	if (files[0].name.startsWith('Item_음악마법')){
+	if(track==1){action_popup.alert('그래.. 별이랑음악.. 더 바랄게 없네');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else {action_popup.alert('별이 쏟아지는 듯한 음악이네..');
+		     $("#track2")[0].pause(); $("#track1")[0].play();
+		    track=1}
       return;
 }
+	
 
 if (files[0].name.startsWith('Item_소환마법')){
       action_popup.alert('충분히 행복해.. 무언가가 더 필요하지는 않아');
