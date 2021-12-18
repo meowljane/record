@@ -43,11 +43,22 @@ if (files[0].name.startsWith('Item_edit')){
       return;
 }
 
+
 if (files[0].name.startsWith('Item_음악마법')){
-       action_popup.alert('으음~ 노래 들려주려고? 덕분에 기분 좋아졌어');
+	if(track==1){action_popup.alert('으음~ 노래 들려주려고? 덕분에 기분 좋아졌어');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('하고 싶은 말은 없는거야??');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else {action_popup.alert('뭐야~ 뭘 하려고 이렇게 음악을 바꿔대!');
+		     $("#track3")[0].pause(); $("#track1")[0].play();
+		    track=1}
       return;
 }
-
+	
+	
+	
 if (files[0].name.startsWith('Item_소환마법')){
        action_popup.alert('히히 마법이라도 보여주려는거야?');
       return;
