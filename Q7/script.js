@@ -36,11 +36,21 @@ if (files[0].name.startsWith('Item_유연제')){
       return;
 }
 
-if (files[0].name.startsWith('Item_음악마법')){
-  action_popup.alert('음악을 바꿔주는 마법...\n 다른 세계에선 mp3라고 한대');
-  return;
+	
+	if (files[0].name.startsWith('Item_음악마법')){
+	if(track==1){ action_popup.alert('음악을 바꿔주는 마법...\n 다른 세계에선 mp3라고 한대');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else if(track==2){action_popup.alert('귀에 무언갈 달고 음악을 듣는 삽화야...징그럽다!');
+		     $("#track2")[0].pause(); $("#track3")[0].play();
+		    track=3}
+	else {action_popup.alert('도서관이니까 조용히 원래 음악으로 바꿔두자');
+		     $("#track3")[0].pause(); $("#track1")[0].play();
+		    track=1}
+      return;
 }
-
+	
+	
 if (files[0].name.startsWith('Item_빛마법')){
   action_popup.alert('흠.. 인광..형광?..들뜬상태..? 너가 대신 읽어봐ㅠㅠ');
   return;
