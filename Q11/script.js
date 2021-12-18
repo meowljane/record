@@ -43,9 +43,15 @@ if (files[0].name.startsWith('Item_keyword')){
 }
 
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('쉬잇... 제발...무서워...');
+	if(track==1){action_popup.alert('으응... 음악을 들으니 \n 그나마 나아지네...');
+		     $("#track1")[0].pause(); $("#track2")[0].play();
+		    track=2}
+	else {action_popup.alert('고마워... 처음 것도 다시 듣자');
+		     $("#track2")[0].pause(); $("#track1")[0].play();
+		    track=1}
       return;
 }
+	
 
 if (files[0].name.startsWith('Item_빛마법')){
   action_popup.alert('지금은 최대한 눈에 띄지 말아야해');
