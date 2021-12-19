@@ -300,7 +300,7 @@ function uploadFiles(e) {
   }
   
   if (files[0].name.startsWith('Item_동전')){
-    action_popup.alert('이 세계에 10개 이내의 수만 남아있다고 한다.');
+    action_popup.alert('전 세계에 10개 가량만이 남아있다고 한다.');
     return;
     }
 
