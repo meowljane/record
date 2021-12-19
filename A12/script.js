@@ -88,7 +88,7 @@ function uploadFiles(e) {
     }
     
     if (files[0].name.startsWith('Item_발톱')) {
-      action_popup.alert('장례도 치르지 못하고 도망나오다니...');
+      action_popup.alert('난 미야가 당한것을 보고도 도망을 쳤다...');
       return;
     }
     
