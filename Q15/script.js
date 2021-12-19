@@ -23,6 +23,7 @@ aonoff = 0;
 bonoff = 0;
 conoff = 0;
 donoff = 0;
+track = 1;
 
 ballon = aonoff+bonoff+conoff+donoff;
 function uploadFiles(e) {
