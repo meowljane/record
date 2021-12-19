@@ -30,7 +30,7 @@ function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        action_popup.alert('이제 마지막인데 천천히 하자!!.');
+        action_popup.alert('이제 마지막인데 집중해!! 하나씩!');
         return;
     }
 
