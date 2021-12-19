@@ -60,7 +60,7 @@ function uploadFiles(e) {
 
 
 if (files[0].name.startsWith('Item_소환마법')){
-      action_popup.alert('복수를 위해 쓰일 마법서');
+      action_popup.alert('미야 부활을 위해 쓰일 마법서');
       return;
 }
 
