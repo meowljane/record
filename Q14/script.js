@@ -19,6 +19,7 @@ function dragOver(e){
     }
 }
 trig='off';
+track = 1;
 
 
 function uploadFiles(e) {
