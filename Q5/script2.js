@@ -20,6 +20,7 @@ function dragOver(e){
 		});
     }
 }
+track = 1;
 
 trig='off';
 
