@@ -42,13 +42,13 @@ function uploadFiles(e) {
       return;
 }
 if (files[0].name.startsWith('Item_음악마법')){
-      action_popup.alert('미야와 정말 결혼하려고 했다.');
+      action_popup.alert('미야와 결혼할 것이다...무조건.');
       return;
 }
 
 
 if (files[0].name.startsWith('Item_소환마법')){
-action_popup.alert('나의 방어기제는 미야의 죽음을 인정하지 못한다.');
+action_popup.alert('미야는 아직 완전히 떠난게 아니다. 절대로.');
 return;
 }
 
