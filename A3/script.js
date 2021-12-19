@@ -69,6 +69,11 @@ if (files[0].name.startsWith('Item_톱니바퀴')){
       return;
 }
 
+if (files[0].name.startsWith('Item_색마법')){
+      action_popup.alert('여기에는 필요 없다');
+      return;
+}	
+	
 if (files[0].name.startsWith('Item_주사위')){
       action_popup.alert('이것도 미야의 미래를 점치지는 못했다.');
       return;
