@@ -34,7 +34,7 @@ function uploadFiles(e) {
         return;
     }
 
-iles[0].name.startsWith('Item_edit')){
+if (files[0].name.startsWith('Item_edit')){
       action_popup.alert('너 진짜~! 아직도 가지고 있니!');
       return;
 }
