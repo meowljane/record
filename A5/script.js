@@ -68,7 +68,7 @@ if (files[0].name.startsWith('Item_톱니바퀴')){
         return;
   }
   if (files[0].name.startsWith('Item_음악마법')){
-        action_popup.alert('제발...미야를 떠올리게 하지 마.');
+        action_popup.alert('제발...미야와 내가 다시 만날 수 있기를...');
         return;
   }
   
@@ -90,7 +90,7 @@ if (files[0].name.startsWith('Item_톱니바퀴')){
 
 
   if (files[0].name.startsWith('Item_색마법')){
-        action_popup.alert('이렇게 미야를 사랑하게 되었을 때 앗아가다니..');
+        action_popup.alert('제발...미야와 내가 다시 만날 수 있기를...');
         return;
         }
   
