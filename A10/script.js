@@ -71,17 +71,17 @@ function uploadFiles(e) {
   }
 
   if (files[0].name.startsWith('Item_톱니바퀴')) {
-    action_popup.alert('봉인 재료가 숨겨진 마지막 장소를 찾아야한다.');
+    action_popup.alert('부활에 대한 정보가 있는 마지막 장소를 찾아야한다.');
     return;
   }
 
   if (files[0].name.startsWith('Item_주사위')) {
-    action_popup.alert('봉인 재료가 숨겨진 마지막 장소를 찾아야한다.');
+    action_popup.alert('부활에 대한 정보가 있는 마지막 장소를 찾아야한다.');
     return;
   }
 
   if (files[0].name.startsWith('Item_고무호스')) {
-    action_popup.alert('봉인 재료가 숨겨진 마지막 장소를 찾아야한다.');
+    action_popup.alert('부활에 대한 정보가 있는 마지막 장소를 찾아야한다.');
     return;
   }
 
@@ -97,7 +97,7 @@ function uploadFiles(e) {
   }
 
   if (files[0].name.startsWith('Item_동전')) {
-    action_popup.alert('봉인 재료가 숨겨진 마지막 장소를 찾아야한다.');
+    action_popup.alert('부활에 대한 정보가 있는 마지막 장소를 찾아야한다.');
     return;
   }
 
