@@ -71,17 +71,17 @@ if (files[0].name.startsWith('Item_소환마법')) {
 }
 
 if (files[0].name.startsWith('Item_톱니바퀴')) {
-  action_popup.alert('봉인 재료가 숨겨진 두번째 장소를 찾아야한다.');
+  action_popup.alert('부활에 대한 정보가 있는 두번째 장소를 찾아야한다.');
   return;
 }
 
 if (files[0].name.startsWith('Item_주사위')) {
-  action_popup.alert('봉인 재료가 숨겨진 두번째 장소를 찾아야한다.');
+  action_popup.alert('부활에 대한 정보가 있는 두번째 장소를 찾아야한다.');
   return;
 }
 
 if (files[0].name.startsWith('Item_고무호스')) {
-  action_popup.alert('봉인 재료가 숨겨진 두번째 장소를 찾아야한다.');
+  action_popup.alert('부활에 대한 정보가 있는 두번째 장소를 찾아야한다.');
   return;
 }
 
@@ -97,7 +97,7 @@ if (files[0].name.startsWith('Item_조각')) {
 }
 
 if (files[0].name.startsWith('Item_동전')) {
-  action_popup.alert('봉인 재료가 숨겨진 두번째 장소를 찾아야한다.');
+  action_popup.alert('부활에 대한 정보가 있는 두번째 장소를 찾아야한다.');
   return;
 }
 
