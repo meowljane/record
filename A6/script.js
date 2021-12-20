@@ -45,7 +45,10 @@ if (files[0].name.startsWith('Item_음악마법')){
       action_popup.alert('미야와 결혼할 것이다...무조건.');
       return;
 }
-
+if (files[0].name.startsWith('Item_동전')){
+      action_popup.alert('이곳에서 얻었던 보물이다. 더는 쓸 곳이 없어보이네');
+      return;
+}
 
 if (files[0].name.startsWith('Item_소환마법')){
 action_popup.alert('미야는 아직 완전히 떠난게 아니다. 절대로.');
