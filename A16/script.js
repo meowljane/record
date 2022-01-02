@@ -147,6 +147,11 @@ function uploadFiles(e) {
     action_popup.alert('다시 모든걸...돌려놔야해...');
     return;
   }
+  
+    if (files[0].name.startsWith('Item_빛마법')) {
+    action_popup.alert('이 아이템은 이미 봉인되었다');
+    return;
+  }
 
   else if (files[0].name.startsWith('Item_')&&trig == 'on') {
       action_popup.alert("더이상 무언갈 쓸 필요 없어...");
